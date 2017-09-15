@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Job List</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <div id="header">
+      <div id="title">
+        <h1>Jobs in Tech</h1>
+      </div>
+      <div id="navigation">
+        <ul>
+          <li><a href='http://127.0.0.1:8000'>Home</a></li>
+          <li><a href='/jobs'>Jobs</a></li>
+          <li><a href='https://medium.com/@NextStepCoders'>Blog</a></li>
+          <li>Contact Us</li>
+          <li><a href='/login'> for employers/recruiters</a></li>
+          <li><a href='users/dashboard'>Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+          <div>
+          {% block content %}
+
+          {% endblock %}
+        </div>
+    </div>
+
+    <div id="footer">
+      <h1>Hello!</h1>
+      <p>Welcome to The Next Step. We’re a London based community, organising
+        coding workshops, meet-ups and help to land your dream job.</p>
+      <h1>Find us on twitter</h1>
+    </div>
+
+  </body>
+</html>
