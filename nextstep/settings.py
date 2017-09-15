@@ -70,6 +70,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'nextstep.wsgi.application'
+LOGIN_REDIRECT_URL = '/user/dashboard/'
 
 
 # Database
