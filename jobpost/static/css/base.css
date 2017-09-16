@@ -75,11 +75,24 @@ body {
   height: 400px;
   width: 100%;
   clear: both;
-  display: block;
+  display: inline-block;
+}
+
+#footer_1 {
+max-width: 50%;
+display: inline-block;
+
+}
+
+#footer_2 {
+max-width: 50%;
+display: inline-block;
+
 }
 
 #footer h1 {
 color: white;
+max-width: 50%;
 }
 
 #footer p {
