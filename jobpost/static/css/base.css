@@ -1,10 +1,18 @@
 #wrapper {
-  max-width: 70%;
+  width: 80%;
+  min-height: 500px;
   background-color: white;
   margin: 0 auto;
+  padding: 0px;
   display: block;
   clear: both;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #login {
 height: 350px;
 min-width: 400px;
@@ -14,6 +22,15 @@ border-style: solid;
 margin: 30 auto;
 background-color: ;
 border-color: grey;
+}
+
+a:visited {
+text-decoration: none;
+color: inherit;
+}
+
+a:link {
+text-decoration: none;
 }
 
 .sign-in-header {
@@ -96,38 +113,45 @@ ol {
   background-color: #202020;
   height: 400px;
   width: 100%;
-  clear: both;
-  display: block;
+  clear: right;
   color: grey;
-  padding: 0px;
-  margin: 0px;
+  padding: 0px 0px -50px 0px;
+  margin: 0px 0px -50px -10px;
+  float: right;
+}
+
+#footer_outer {
+  margin: 0 auto;
+  padding: 0px 0px 0px 0px;
+  width: 80%;
+  height: 100%;
 }
 
 #footer_1 {
-width: 42%;
-height: 80%;
+width: 45%;;
+height: 300px;
 display: inline-block;
-padding: 60px 5px 5px 100px;
-background-color: blue;
+padding: 50px 0px 0px 10px;
 margin: 0;
 float: left;
 }
 
 #footer_2 {
-width: 42%;
-height: 80%;
+width: 45%;
+height: 300px;
 display: inline-block;
-padding: 60px 5px 5px 100px;
-background-color: yellow;
+padding: 50px 0px 0px 100px;
 margin: 0;
 float: left;
 }
 
 #footer li {
 color: grey;
+padding: 0px;
+margin: 0px;
 }
 
-#footer li:hover {
+#footer a:hover {
 color: white;
 }
 
@@ -141,12 +165,6 @@ padding: 10px 40px 40px 0px;
   padding: 0px;
   margin: 0px;
   color: white;
-}
-
-
-#footer li {
-  padding: 0px;
-  margin: 0px;
 }
 
 #footer ol {
