@@ -39,9 +39,22 @@ border-color: grey;
   min-height: 40px;
 }
 
-  background-colour {
-  blue;
+.button {
+background-color: #00B9CE;
+color: white;
+width: 150px;
+height: 50px;
+border-style: none;
+border-radius: 5px;
+font-size: 20px;
+margin: 0;
 }
+
+.button:hover {
+background-color: white;
+color: #202020;
+}
+
 body {
   background-color: #F2F2F2;
 }
@@ -65,41 +78,78 @@ body {
   float: right;
 }
 
+ol {
+  list-style: none;
+}
+
 #navigation li {
   display: inline;
   padding-right: 20px;
 }
+/****************************************************
+
+                  footer styles
+
+*****************************************************/
 
 #footer {
   background-color: #202020;
   height: 400px;
   width: 100%;
   clear: both;
-  display: inline-block;
+  display: block;
+  color: grey;
+  padding: 0px;
+  margin: 0px;
 }
 
 #footer_1 {
-max-width: 50%;
+width: 42%;
+height: 80%;
 display: inline-block;
-
+padding: 60px 5px 5px 100px;
+background-color: blue;
+margin: 0;
+float: left;
 }
 
 #footer_2 {
-max-width: 50%;
+width: 42%;
+height: 80%;
 display: inline-block;
-
+padding: 60px 5px 5px 100px;
+background-color: yellow;
+margin: 0;
+float: left;
 }
 
-#footer h1 {
+#footer li {
+color: grey;
+}
+
+#footer li:hover {
 color: white;
-max-width: 50%;
 }
 
 #footer p {
 color: grey;
+padding: 10px 40px 40px 0px;
 }
 
 
-h1 {
-  padding: 50px;
+#footer h1 {
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+
+#footer li {
+  padding: 0px;
+  margin: 0px;
+}
+
+#footer ol {
+  padding: 0px;
+  margin: 0px;
 }

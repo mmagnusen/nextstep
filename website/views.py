@@ -20,6 +20,12 @@ def dashboard(request):
 def index(request):
     return render(request, 'website/index.html')
 
+def about_us(request):
+    return render(request, 'website/about_us.html')
+
+def contact_us(request):
+    return render(request, 'website/contact_us.html')
+
 def register(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
