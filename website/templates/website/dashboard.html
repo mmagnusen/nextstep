@@ -2,7 +2,20 @@
 {% extends 'base_logged_in.html' %}
 
 {% block content %}
-<h1>Welcome to your dashboard - dashboard.html</h1>
-<h1>Create a new job post below:</h1>
-
+<div id='dashboard_wrapper'>
+    <div id="dashboard_title">
+        <h1>Welcome to your dashboard</h1>
+    </div>
+    <div>
+      <h1>Your login details</h1>
+      <p>Account Email:</p>
+      <p>Account Password:</p>
+      <p>First Name:</p>
+      <p>Last Name:</p>
+    </div>
+    <div id="companies_list">
+      <h1>Companies</h1>
+    </div>
+        <h1>Create a new job post below:</h1>
+</div>
 {% endblock %}

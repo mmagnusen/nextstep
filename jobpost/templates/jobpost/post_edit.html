@@ -1,10 +1,12 @@
 {% extends 'base_logged_in.html' %}
 
 {% block content %}
-<h1>New post</h1>
-<form method="POST">{% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Submit</button>
-</form>
+<div id='new_post_wrapper'>
+    <h1>Post a new job</h1>
+    <form method="POST">{% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+</dov>
 
 {% endblock %}
