@@ -323,7 +323,7 @@ ol {
 *****************************************************/
 #dashboard_wrapper {
   width: 80%;
-  background-color: pink;
+  background-color: green;
   margin: 20 auto;
 }
 
@@ -342,7 +342,14 @@ ol {
 
 #companies_list {
   background-color: yellow;
-  height: 200px;
+  height: 800px;
+}
+
+.company {
+  height: 100px;
+  background-color: pink;
+  margin: 10px;
+
 }
 
 /****************************************************

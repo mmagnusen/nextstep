@@ -11,11 +11,13 @@ from .forms import UserRegistrationForm
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import views as auth_views
+from company.models import Company
 
 
 # Create your views here.
 def dashboard(request):
-    return render(request, 'website/dashboard.html')
+    companys = Company.objects.all()
+    return render(request, 'website/dashboard.html', {'companys': companys})
 
 def index(request):
     return render(request, 'website/index.html')
