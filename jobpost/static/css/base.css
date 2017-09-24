@@ -14,8 +14,8 @@ body {
 }
 
 h1 {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-size: 20px;
 }
 
@@ -94,7 +94,7 @@ margin: 0 auto;
 .button {
 background-color: #00B9CE;
 color: white;
-width: 150px;
+width: 200px;
 height: 50px;
 border-style: none;
 border-radius: 5px;
@@ -323,7 +323,6 @@ ol {
 *****************************************************/
 #dashboard_wrapper {
   width: 80%;
-  background-color: green;
   margin: 20 auto;
 }
 
@@ -340,9 +339,34 @@ ol {
   font-size: 40px;
 }
 
+#account_details {
+  height: 150px;
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+  border-bottom-color: grey;
+  display: block;
+  margin-bottom: 10px;
+}
+
+
 #companies_list {
-  background-color: yellow;
-  height: 800px;
+  height: 1000px;
+}
+
+#companies_header {
+  height: 150px;
+}
+
+#companies_title {
+  width: 30%;
+  display: inline-block;
+  height: 100px;
+}
+
+#companies_button {
+  width: 30%;
+  display: inline-block;
+  height: 100px;
 }
 
 .company {

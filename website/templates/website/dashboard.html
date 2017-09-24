@@ -6,19 +6,25 @@
     <div id="dashboard_title">
         <h1>Welcome to your dashboard</h1>
     </div>
-    <div>
-      <h1>Your login details</h1>
+
+    <div id='account_details'>
+      <h1>Your  details</h1>
       <p>Account Email:</p>
-      <p>Account Password:</p>
-      <p>First Name:</p>
-      <p>Last Name:</p>
+      <p>{{ user.email }}</p>
+      <p>{{ user.username }}</p>
     </div>
 
     <div id="companies_list">
-      <h1>List of companies</h1>
-      <a href="{% url 'company_new' %}">
-        <button class="button">Add new company</button>
-      </a>
+      <div id='companies_header'>
+        <div id='companies_title'>
+          <h1>List of companies</h1>
+        </div>
+        <div id='companies_button'>
+        <a href="{% url 'company_new' %}">
+          <button class="button">Add new company</button>
+        </a>
+        </div>
+      </div>
 
           {% for company in companys %}
                 <div class='company'>
@@ -32,11 +38,10 @@
 
 
           {% endfor %}
-    </div>
+      </div>
         <h1>Create a new job post below:</h1>
         <a href="{% url 'post_new' %}">
           <div id='post_job'><button id='post_jobs_button'>Post a new job</button></div>
         </a>
-
 </div>
 {% endblock %}

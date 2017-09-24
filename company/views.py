@@ -36,7 +36,7 @@ def company_edit(request, pk):
             company.owner = request.user
             company.created_date = timezone.now()
             company.save()
-            return redirect('company_detail', pk=post.pk)
+            return redirect('company_detail', pk=company.pk)
 
     else:
         form = CompanyForm(instance=company)
