@@ -1,8 +1,9 @@
 {% extends 'base_logged_in.html' %}
 
 {% block content %}
-<div id='new_post_wrapper'>
-    <h1>Post a new job</h1>
+
+<div id='new_company_wrapper'>
+    <h1>Create a new company</h1>
     <form method="POST">{% csrf_token %}
       {{ form.as_p }}
       <button type="submit">Submit</button>

@@ -16,12 +16,18 @@
 
     <div id="companies_list">
       <h1>List of companies</h1>
-      <button class="button">Add new company</button>
+      <a href="{% url 'company_new' %}">
+        <button class="button">Add new company</button>
+      </a>
 
           {% for company in companys %}
                 <div class='company'>
+                  <a href="{% url 'company_detail' pk=company.pk %}">
                     <h1>{{ company.name }} </h1>
+                  </a>
                 </div>
+
+
 
 
 

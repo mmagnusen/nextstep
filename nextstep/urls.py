@@ -20,6 +20,7 @@ from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
+    url(r'^/user/dashboard/company/', include('company.urls')),
     url(r'^/user/dashboard/', include('website.urls')),
     url(r'^/user/register/', include('website.urls')),
     url(r'^login/', auth_views.login),
