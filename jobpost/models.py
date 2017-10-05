@@ -10,7 +10,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    owned_by_company = models.ForeignKey('company.Company', default=1, on_delete=models.CASCADE,)
+    owned_by_company = models.ForeignKey('company.Company', default=1, on_delete=models.CASCADE, related_name="comp", related_query_name="comps")
 
 
     def publish(self):

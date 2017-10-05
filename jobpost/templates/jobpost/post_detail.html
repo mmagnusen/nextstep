@@ -18,6 +18,8 @@
     {% if post.published_date %}
 
     <div class='date'>
+        <p> Company: {{ post.owned_by_company }} </p>
+        <p> Location: {{ post.location }} </p>
         <p> Posted on {{ post.published_date }} </p>
     </div>
     {% endif %}

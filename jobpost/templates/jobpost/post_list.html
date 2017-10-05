@@ -15,7 +15,7 @@
           <div class='post'>
             <a href="{% url 'post_detail' pk=post.pk %}">
                 <h1>{{ post.title }}</h1>
-                <p> {{ post.company }} </p>
+                <p> {{ post.owned_by_company }} </p>
                 <p> {{ post.location }} </p>
                 <p> {{ post.description|linebreaksbr }}</p>
             </a>
