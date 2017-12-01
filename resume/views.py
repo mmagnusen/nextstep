@@ -18,18 +18,13 @@ def resume_detail(request, pk):
     return render(request, 'resume/resume_detail.html', {'resume': resume})
 
 def resume_new(request):
-    if request.method == 'POST':
-        form = ResumeForm(request.POST)
-        if form.is_valid():
-            resume = form.save(commit=False)
-            resume.author = request.user
-            resume.published_date = timezone.now()
-            resume.save()
-            return redirect('/user/dashboard', pk=resume.pk)
+        newResume = Resume()
+        newResume.owner = request.user
+        newResume.published_date = timezone.now()
+        newResume.save()
+        key = newResume.pk
 
-    else:
-        form = ResumeForm()
-    return render(request, 'resume/resume_edit.html', {'form': form})
+        return redirect('resume_edit', pk=newResume.pk)
 
 def resume_edit(request, pk):
     resume = get_object_or_404(Resume, pk=pk)

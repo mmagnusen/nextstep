@@ -1,7 +1,8 @@
 //variables for storing elements
 var mainDiv = document.getElementById("content_div");
 var children = document.getElementsByClassName('tooltip_class');
-var menu = document.getElementById('resume_menu');
+var menu = document.getElementById('return_to_dashboard');
+
 
 var xMouse;
 var yMouse;

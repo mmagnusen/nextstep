@@ -16,6 +16,10 @@ body {
   margin: 50px 50px;
 }
 
+#return_to_dashboard {
+  float: right;
+}
+
 #resume_menu {
 display: block;
 }

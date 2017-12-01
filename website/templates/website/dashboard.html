@@ -19,9 +19,26 @@
       </div>
     </div>
     <div id='cv_list'>
-    <a href="{% url 'resume_new' %}">
-    <button class="button">Create new CV</button>
+
+      <a href="{% url 'resume_new' %}">
+    <button class="button" id='create_new_cv_dashboard'>Create new CV</button>
     </a>
+
+    {% for resume in resumes %}
+          <div class='resume'>
+            <a href="{% url 'resume_detail' pk=resume.pk %}">
+              <h1>{{ resume.owner }} </h1>
+            </a>
+
+
+          </div>
+
+
+
+
+
+    {% endfor %}
+
     </div>
 
     <div id="companies_list">
