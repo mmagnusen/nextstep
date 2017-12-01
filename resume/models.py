@@ -12,6 +12,9 @@ class Resume(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     last_updated = models.DateTimeField(default=timezone.now)
     content = models.TextField()
+    title = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    description = models.TextField()
 
     def publish(self):
         self.published_date = timezone.now()

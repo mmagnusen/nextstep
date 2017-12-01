@@ -1,0 +1,81 @@
+form {
+  background-color: #edeeef;
+  width: 550px;
+  margin: 40px auto;
+  border-radius: 5px;
+  font-family: 'Noto Sans', sans-serif;
+  padding-bottom: 5px;
+}
+
+#fields {
+  color: #35393a;
+}
+
+fieldset {
+    border: 0;
+}
+
+.form_label {
+  display: inline;
+  float: left;
+  margin: 22px 0px 0px 40px;
+  width: 100px;
+  height: 40px;
+}
+
+
+#username_field {
+  display: block;
+  margin: 15px;
+  border-radius: 2px;
+
+
+}
+
+#password_field {
+  display: block;
+  margin: 15px;
+  border-radius: 2px;
+}
+
+.login_field {
+  background-color: #dee1e5;
+  border-style: none;
+  height: 35px;
+  width: 250px;
+  outline: none;
+  display: inline;
+  float: left;
+}
+
+.login_field:focus {
+  border-style: solid;
+  border-color: #71d68e;
+  border-radius: 5px;
+  border-width: 2px
+}
+
+.login_button {
+
+  background-color: #71d68e;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  margin: 30px auto;
+  display: block;
+  color: white;
+}
+
+.form_icon {
+  margin: 20px; 0px 0px 0px;
+}
+
+#login_header {
+  text-align: center;
+  background-color: #5d6166;
+  color: white;
+  height: 50px;
+  padding: 30px 0px 60px 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}

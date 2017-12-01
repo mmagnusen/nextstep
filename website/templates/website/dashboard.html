@@ -9,9 +9,19 @@
 
     <div id='account_details'>
       <h1>Your  details</h1>
-      <p>Account Email:</p>
-      <p>{{ user.email }}</p>
-      <p>{{ user.username }}</p>
+      <div id="email_block">
+        <p id='email'>Account Email:</p>
+        <p id='user_email'>{{ user.email }}</p>
+      </div>
+      <div id="name_block">
+        <p id='name'>Your name:</p>
+        <p id='user_name'>{{ user.username }}</p>
+      </div>
+    </div>
+    <div id='cv_list'>
+    <a href="{% url 'resume_new' %}">
+    <button class="button">Create new CV</button>
+    </a>
     </div>
 
     <div id="companies_list">

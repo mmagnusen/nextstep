@@ -3,17 +3,24 @@
 {% extends 'base_logged_out.html' %}
 
 {% block content %}
-<h1>Welcome to your login page</h1>
+
 <form method="POST">
+    <div id="login_header"><h1>Login</h1></div>
     {% csrf_token %}
-    <p>
-        <label>Username</label>
-        <input type="text" name="username">
-    </p>
-    <p>
-        <label>Password</label>
-        <input type="password" name="password">
-    </p>
-    <button type="submit">Login</button>
+    <div id="fields">
+      <fieldset>
+            <label for='username_field' class="form_label" ">Username</label>
+            <input type="text" id="username_field" class="login_field" name="username" placeholder="e.g myusername">
+            <div class="form_icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+
+      </fieldset>
+        <fieldset>
+            <label for="password_field" class="form_label">Password</label>
+            <input type="password" name="password" class="login_field" id="password_field">
+            <div class="form_icon"><i class="fa fa-unlock-alt  fa-lg " aria-hidden="true"></i></i></div>
+
+      </fieldset>
+    </div>
+    <button type="submit" class="login_button">Login</button>
 </form>
 {% endblock %}

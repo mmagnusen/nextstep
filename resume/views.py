@@ -8,39 +8,40 @@ from django.shortcuts import render, get_object_or_404
 from .forms import ResumeForm
 
 # Create your views here.
+
 def resume_list(request):
-    resumes = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'jobpost/post_list.html', {'posts': posts})
+    resumes = Resume.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'resume/resume_list.html', {'resumes': resumes})
 
-def post_detail(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    return render(request, 'jobpost/post_detail.html', {'post': post})
+def resume_detail(request, pk):
+    resume = get_object_or_404(Resume, pk=pk)
+    return render(request, 'resume/resume_detail.html', {'resume': resume})
 
-def post_new(request):
+def resume_new(request):
     if request.method == 'POST':
-        form = PostForm(request.POST)
+        form = ResumeForm(request.POST)
         if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('/user/dashboard', pk=post.pk)
+            resume = form.save(commit=False)
+            resume.author = request.user
+            resume.published_date = timezone.now()
+            resume.save()
+            return redirect('/user/dashboard', pk=resume.pk)
 
     else:
-        form = PostForm()
-    return render(request, 'jobpost/post_edit.html', {'form': form})
+        form = ResumeForm()
+    return render(request, 'resume/resume_edit.html', {'form': form})
 
-def post_edit(request, pk):
-    post = get_object_or_404(Post, pk=pk)
+def resume_edit(request, pk):
+    resume = get_object_or_404(Resume, pk=pk)
     if request.method == 'POST':
-        form = PostForm(request.POST, instance=post)
+        form = PostForm(request.POST, instance=resume)
         if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
+            resume = form.save(commit=False)
+            resume.author = request.user
+            resume.published_date = timezone.now()
+            resume.save()
+            return redirect('resume_detail', pk=resume.pk)
 
     else:
-        form = PostForm(instance=post)
-    return render(request, 'jobpost/post_edit.html', {'form': form})
+        form = ResumeForm(instance=resume)
+    return render(request, 'resume/resume_edit.html', {'form': form})

@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^login/', auth_views.login),
     url(r'^logout/', auth_views.logout),
     url(r'^admin/', admin.site.urls),
+    url(r'resume/', include('resume.urls')),
     url(r'jobs/', include('jobpost.urls')),
     url(r'', include('website.urls')),
     ]
