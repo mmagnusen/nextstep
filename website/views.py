@@ -12,12 +12,15 @@ from django.utils import timezone
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import views as auth_views
 from company.models import Company
+from resume.models import Resume
+
 
 
 # Create your views here.
 def dashboard(request):
     companys = Company.objects.all()
-    return render(request, 'website/dashboard.html', {'companys': companys})
+    resumes = Resume.objects.all()
+    return render(request, 'website/dashboard.html', {'resumes': resumes})
 
 def index(request):
     return render(request, 'website/index.html')

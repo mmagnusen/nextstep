@@ -1,6 +1,6 @@
 #wrapper {
   width: 100%;
-  min-height: 400px;
+  min-height: 600px;
   background-color: white;
   margin: 0 auto;
   padding: 0px;
@@ -24,7 +24,6 @@ h2 {
   margin: 0;
   padding: 0;
 }
-
 
 #login {
 height: 350px;
@@ -343,6 +342,7 @@ homepage_wrapper {
 #dashboard_wrapper {
   width: 80%;
   margin: 20 auto;
+  min-height: 2000px;
 }
 
 #dashboard_title {
@@ -399,31 +399,12 @@ homepage_wrapper {
   height: 1000px;
 }
 
-#companies_list {
-  height: 1000px;
+#resume_list_dashboard {
+  min-height: 400px;
 }
 
-#companies_header {
-  height: 150px;
-}
-
-#companies_title {
-  width: 30%;
-  display: inline-block;
-  height: 100px;
-}
-
-#companies_button {
-  width: 30%;
-  display: inline-block;
-  height: 100px;
-}
-
-.company {
-  height: 100px;
-  background-color: pink;
-  margin: 10px;
-
+.resume_in_list {
+  height: 50px;
 }
 
 /****************************************************
