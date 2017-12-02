@@ -25,3 +25,8 @@ def resume_new(request):
 def resume_edit(request, pk):
     resume = get_object_or_404(Resume, pk=pk)
     return redirect('resume_detail', pk=resume.pk)
+
+def resume_delete(request, pk):
+    resume = get_object_or_404(Resume, pk=pk)
+    resume.delete()
+    return redirect('/user/dashboard', pk=resume.pk)

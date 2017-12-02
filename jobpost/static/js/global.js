@@ -1,6 +1,5 @@
-var newCv = document.getElementById('create_new_cv_dashboard');
-newCv.addEventListener("click", callResumeView);
+var newCv = document.querySelectorAll('.delete_button');
 
-function callResumeView() {
-  console.log('sup');
-}
+newCv.forEach(function(element, index){
+  element.addEventListener('click', function() {console.log('hello');})
+})

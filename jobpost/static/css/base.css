@@ -407,6 +407,17 @@ homepage_wrapper {
   height: 50px;
 }
 
+.delete_button {
+background-color: red;
+color: white;
+width: 150px;
+height: 30px;
+border-style: none;
+border-radius: 5px;
+font-size: 20px;
+margin: 0;
+}
+
 /****************************************************
 
                   footer styles
