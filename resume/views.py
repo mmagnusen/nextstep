@@ -6,6 +6,7 @@ from django.utils import timezone
 from .models import Resume
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.models import User
+from .forms import ResumeForm
 
 
 # Create your views here.

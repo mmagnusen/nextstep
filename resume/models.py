@@ -12,6 +12,7 @@ class Resume(models.Model):
     name = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
     title = models.CharField(max_length=200)
+    content = models.TextField(default='resume content')
 
     def publish(self):
         self.published_date = timezone.now()
