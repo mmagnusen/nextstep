@@ -11,7 +11,7 @@ class Resume(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, default='testtest')
     content = models.TextField(default='resume content')
 
     def publish(self):

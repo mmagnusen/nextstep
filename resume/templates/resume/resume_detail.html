@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id='resume_menu'>
-      <button class='button' type="submit">Save</button>
+      <button class='button' type="submit" id="save_resume_button">Save</button>
       <a href="{% url 'dashboard' %}">
       <div id='return_to_dashboard'>
         <i class="fa fa-ellipsis-h fa-2x"></i>
@@ -18,7 +18,7 @@
 
 
         <div id='content_wrapper'>
-
+            <p>Resume detail</p>
             <div class='cv' contenteditable="true" id='content_div'>
               <p>Content Editable: Start typing to create your CV</p>
               <p>This is the second paragraph, yeahsdfs
@@ -28,5 +28,6 @@
 
 
     <script type="text/javascript" src="{% static 'js/content.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/resume_save.js' %}" ></script>
   </body>
 </html>
