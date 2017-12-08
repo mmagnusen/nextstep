@@ -33,7 +33,6 @@ function saveCV() {
    if (this.readyState === 4) {
      console.log('state === 4');
 
-     content_editable.innerHTML = this.ResponseText;
    }
   };
 
