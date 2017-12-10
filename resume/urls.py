@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    url(r'^resume/(?P<pk>\d+)/image_save/$', views.single_image_save, name='single_image_save'),
     url(r'^resume/(?P<pk>\d+)/save/$', views.resume_save, name='resume_save'),
     url(r'^resume/(?P<pk>\d+)/delete/$', views.resume_delete, name='resume_delete'),
     url(r'^resume/(?P<pk>\d+)/update/$', views.resume_update, name='resume_update'),

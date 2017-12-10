@@ -24,7 +24,6 @@ var cmndArray = [
   ['justifyRight', '<i class="fa fa-align-right"></i>'],
   ['justifyFull', '<i class="fa fa-align-justify"></i>']
       ];
-console.log('sssup');
 mainDiv.addEventListener("mouseup", createRange);
 
 //checking if user has selected any text
@@ -61,9 +60,9 @@ function checkForExistingTooltips() {
 
     //creates div for tooltip and sets styles
       var newTip = document.createElement('div');
-      var node = document.createTextNode("T.");
+      var node = document.createTextNode("");
       newTip.appendChild(node);
-      newTip.style.display = 'block'
+      newTip.style.display = 'block';
       newTip.style.width='500px';
       newTip.style.height='50px';
       newTip.style.backgroundColor = '#2e3238';
@@ -71,7 +70,7 @@ function checkForExistingTooltips() {
       newTip.style.left = xMouse + "px";
       newTip.style.top = yMouse + "px";
 
-    //appends newly created div to main content_div div
+    //appends newly created div to main content_wrapper div
     document.getElementById('content_wrapper').appendChild(newTip);
 
 
@@ -93,10 +92,8 @@ function checkForExistingTooltips() {
       }
       var buttonList = document.querySelectorAll('.button_classs');
       buttonList.forEach( function( element, index ) {
-      console.log(element);
       if ( index < 4) {
       element.addEventListener("click", function() { document.execCommand(cmndArray[index][0], false, cmndArray[index][2])});
-      console.log("too high");
     } else {
       element.addEventListener("click", function() { document.execCommand(cmndArray[index][0])});
     }
@@ -116,7 +113,6 @@ function hideToolTip() {
 menu.addEventListener('click', createMenu);
 
 function createMenu() {
-console.log("menue created");
 var createMenu = document.createElement('div');
 createMenu.style.display = 'block';
 createMenu.style.width='30px';

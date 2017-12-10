@@ -1,5 +1,6 @@
 //var bodyElement = document.getElementsByTagName("BODY")[0];
 //bodyElement.addEventListener("onload", updateCV);
+var cv_name = document.getElementById('cv_name_div');
 
 window.onload = function() {
   console.log('body loaded, function to get object content');
@@ -12,8 +13,9 @@ window.onload = function() {
 
      var data = xhrUpdate.response;
      var parsed = JSON.parse(data);
-     console.log(parsed.content)
-     content_editable.innerHTML = parsed.content
+     console.log(parsed.content);
+     content_editable.innerHTML = parsed.content;
+     cv_name.innerHTML = parsed.name;
    }
   };
 

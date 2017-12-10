@@ -5,4 +5,4 @@ class ResumeForm(forms.ModelForm):
 
         class Meta:
             model = Resume
-            fields = ('name', 'title', 'content',)
+            fields = ('name', 'content',)

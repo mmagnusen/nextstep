@@ -19,6 +19,9 @@
 
         <div id='content_wrapper'>
             <p>Resume detail, update please</p>
+            <div contenteditable="true" id='cv_name_div'>
+              <p>Enter a name for your CV here</p>
+            </div>
             <div class='cv' contenteditable="true" id='content_div'>
               <p>Content Editable: Start typing to create your CV</p>
               <p>This is the second paragraph, yeahsdfs
@@ -26,9 +29,8 @@
             </div>
         </div>
 
+    <script type="text/javascript" src="{% static 'js/insert_media.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/insert_media_ajax.js' %}" ></script>
 
-    <script type="text/javascript" src="{% static 'js/content.js' %}" ></script>
-    <script type="text/javascript" src="{% static 'js/resume_save.js' %}" ></script>
-    <script type="text/javascript" src="{% static 'js/resume_update.js' %}" ></script>
   </body>
 </html>
