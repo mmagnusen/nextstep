@@ -3,7 +3,6 @@ function startImageAjax() {
   var selectedFileList = document.querySelectorAll('input');
 
   selectedFileList.forEach( function ( element, index ) {
-    console.log('for each activated');
     element.addEventListener('change', sendAjax);
   })
 }
@@ -12,11 +11,13 @@ function startImageAjax() {
 function sendAjax() {
 
   console.log('sending ajax');
-  var input = document.getElementById('inputFieldID');
-  var file = input.files[0];
+  //debugger;
+  var input = document.getElementById('file');
   var formData = new FormData();
+  var file = input.files[0];
   formData.append('file', file);
   console.log(file);
+  console.log(formData);
   var xhr = new XMLHttpRequest();
 
   xhr.onreadystatechange = function () {
@@ -25,9 +26,7 @@ function sendAjax() {
    }
   };
 
-  xhr.open('POST', 'image_save/', true);
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-  //xhr.open('GET', '/user/dashboard'); works
+  xhr.open('POST', 'image_save/');
   var data = 'testing data';
   xhr.send(formData);
 

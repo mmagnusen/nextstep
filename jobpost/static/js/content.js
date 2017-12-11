@@ -5,7 +5,6 @@ var mainDiv = document.getElementById("content_div");
 var children = document.getElementsByClassName('tooltip_class');
 var menu = document.getElementById('return_to_dashboard');
 var inner = mainDiv.innerHTML;
-console.log(inner);
 
 var xMouse;
 var yMouse;

@@ -59,7 +59,8 @@ def resume_delete(request, pk):
 def single_image_save(request, pk):
     if request.method == 'POST':
         resume = get_object_or_404(Resume, pk=pk)
-        newImage = SingleImage(owner= request.user, name = 'image name')
+        userImage = request.FILES['file']
+        newImage = SingleImage(owner= request.user, name = 'image name', parentCV = resume, image = userImage)
         newImage.save()
         json_object = {'content': 'hello', 'name': 'some name'}
         return JsonResponse(json_object)

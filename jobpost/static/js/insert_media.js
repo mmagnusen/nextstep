@@ -1,7 +1,6 @@
 var mainDiv = document.getElementById("content_div");
 mainDiv.addEventListener("mouseup", clickedOnEmptyLine);
 var modalChildren = document.getElementsByClassName('imageClass');
-console.log(modalChildren);
 var getContentWrapper = document.getElementById("content_wrapper");
 var xMouse;
 var yMouse;
@@ -81,19 +80,61 @@ function createModal () {
   createTopDiv.id = 'topDivID';
   newModal.appendChild(createTopDiv);
 
+  console.log('top image div clicked');
+
+  var getTopDiv = document.getElementById('topDivID');
+  getTopDiv.addEventListener('click', createImageInput);
+
+  function createImageInput() {
+  var createImageInput = document.createElement('input');
+  var imageInputNode = document.createTextNode("");
+  createImageInput.appendChild(imageInputNode);
+  createImageInput.setAttribute('type', 'file')
+  createImageInput.id = 'file';
+  createImageInput.setAttribute('enctype', 'multipart/form-data');
+  createImageInput.setAttribute('name', 'file')
+  createImageInput.setAttribute('class', 'file')
+  createImageInput.setAttribute('title', 'file')
+  createImageInput.setAttribute('value', 'file')
+  createTopDiv.appendChild(createImageInput);
+
+  var getFile = document.getElementById('file');
+  getFile.addEventListener('change', startImageAjax());
+
+}
+
+/*
+  THIS WORKS, BUT I NEED TO DISCONNECT FROM AJAX FILE
+  AAAAAND IT REFRESHES ON SUBMIT
   var getTopDiv = document.getElementById('topDivID');
   getTopDiv.addEventListener('click', makeTopDivClickable);
   function makeTopDivClickable() {
 
     console.log('top image div clicked');
-    var createImageInput = document.createElement('input');
+    var createImageForm = document.createElement('form');
     var imageInputNode = document.createTextNode("");
-    createImageInput.appendChild(imageInputNode);
-    createImageInput.type = 'file';
-    createImageInput.id = 'inputFieldID';
-    createTopDiv.appendChild(createImageInput);
-    startImageAjax();
+    createImageForm.appendChild(imageInputNode);
+    createImageForm.setAttribute('method', 'post');
+    createImageForm.setAttribute('action', 'image_save/');
+    createImageForm.setAttribute('enctype', 'multipart/form-data');
+
+    var i = document.createElement('input');
+    i.setAttribute("name", "file")
+    i.type = 'file';
+    i.id = 'file';
+
+    var s = document.createElement('input');
+    s.setAttribute('type', 'submit');
+    s.setAttribute('value', 'submit');
+    s.setAttribute('name', 'submit');
+
+    createTopDiv.appendChild(createImageForm);
+    createImageForm.appendChild(i);
+    createImageForm.appendChild(s);
+
   }
+
+  */
 
 
   var createBottomDiv = document.createElement('div');
@@ -131,7 +172,7 @@ function createModal () {
 
     var getImageButton = document.querySelectorAll('.imageButtonClass');
     getImageButton.forEach( function( element, index ) {
-          console.log(element);
+
 
           if (index === 0) {
             element.addEventListener("click", createInput);
