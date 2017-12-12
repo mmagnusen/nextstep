@@ -1,11 +1,21 @@
-
 {% extends 'base_logged_out.html' %}
 
 {% block content %}
-<h1>Registration page</h1>
+
 <form method="POST">
-    {% csrf_token %} {{ form.as_p }}
-    <button type="submit">Submit</button>
+    <div id="registration_header"><h1>Register</h1></div>
+    {% csrf_token %}
+    <div id="fields">
+      <fieldset>
+      </fieldset>
+      <fieldset>
+      </fieldset>
+      <fieldset>
+      </fieldset>
+      {{ form.as_p }}
+
+    </div>
+    <button type="submit" class="registration_button">Submit</button>
 </form>
 
 {% endblock %}
