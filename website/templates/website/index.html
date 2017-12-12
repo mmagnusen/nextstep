@@ -1,12 +1,15 @@
 {% extends 'base_logged_in.html' %}
+{% load staticfiles %}
 
 {% block content %}
 <div id ='homepage_wrapper'>
     <div id="index_1">
-      <p>The light-weight editor for creating your CV</p>
+      <h1>The light-weight editor for creating your CV</h1>
+      <img src="{{STATIC_URL}}static/images/cv_example.png" alt="marilyns image" width="1000" height="600" />
+
     </div>
     <div id="index_2">
-      <p>Clutter free. Free up your space with no toolbar</p>
+      <h1>Clutter free. Free up your space with no toolbar</h1>
     </div>
     <div id="index_3">
       <p>Edit inline as you go along</p>

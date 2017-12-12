@@ -1,0 +1,243 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e3ecf9;
+}
+
+h1 {
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+#resume_list_dashboard h1 {
+  color: #1e304c;
+}
+
+#dashboard_title a {
+  text-decoration: none;
+  color: #eaedf2;
+}
+p {
+  font-size: 20px;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  font-size: 30px;
+
+
+}
+
+#cv_list a {
+
+color: white;
+text-decoration: none;
+}
+
+
+/****************************************************
+
+                  dashboard styles
+
+*****************************************************/
+#dashboard_wrapper {
+  width: 80%;
+  margin: 30px auto;
+  min-height: 1500px;
+  border: 0px 0px 70px 0px;
+
+  clear: both;
+  display: block;
+
+}
+
+#dashboard_title {
+  width: 100%;
+  background-color: #1e304c;
+  margin: 20 auto;
+  height: 200px;
+  color: white;
+  clear: both;
+  display: block;
+
+}
+
+#dashboard_title h1 {
+  font-size: 40px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#welcome_message {
+  display: block;
+  float: left;
+  margin: 130px 30px 0px 180px;
+}
+
+#logout {
+  width: 100px;
+  display: block;
+  float: right;
+}
+
+#account_details {
+  height: 250px;
+  display: block;
+  margin: 20px 10px 50px 10px;
+  padding: 20px 20px 20px 20px;
+  clear: both;
+
+
+}
+#left_block {
+  width: 49%;
+  height: 250px;
+  display: inline;
+  float: left;
+  background-color: #27b2d8;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#right_block {
+  width: 50%;
+  height: 250px;
+  display: inline;
+  float: right;
+  background-color: #27b2d8;
+  border-radius: 0px 10px 20px 0px;
+  box-sizing: border-box;
+  padding: 20px 0px 0px 20px;
+}
+
+#your_details {
+  display: block;
+  height: 50px;
+  width: 80%;
+  padding: 0px 0px 0px 30px;
+  margin: 15px 10px 10px 10px;
+
+}
+#email_block {
+  display: block;
+  height: 80px;
+  width: 80%;
+  padding: 0px 0px 0px 30px;
+  margin: 15px 10px 10px 10px;
+
+}
+
+#email {
+  display: inline;
+}
+
+#user_email {
+    display: inline;
+    min-width: 50px;
+}
+
+#name_block {
+    display: inline;
+    width: 80%;
+    height: 80px;
+    padding: 0px 0px 0px 30px;
+    margin: 15px 10px 10px 10px;
+
+}
+
+#name {
+    display: inline;
+}
+
+#user_name {
+  display: inline;
+  min-width: 50px;
+}
+#resume_list_new {
+
+  height: 100px;
+  width: 100%;
+}
+
+#resume_list {
+
+  height: 40px;
+  width: 50%;
+  display: inline-block;
+  margin: 25px 10px 10px 10px;
+}
+
+#new_cv {
+
+  height: 40px;
+  width: 40%;
+  display: inline-block;
+}
+
+.new_cv_button {
+  background-color: #27b2d8;
+  width: 130px;
+  height: 40px;
+  color: white;
+  border-radius: 10px;
+}
+
+#cv_list {
+  height: 1050px;
+
+  display: block;
+  clear: left;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+#resume_list_dashboard {
+  width: 80%;
+  margin: 0 auto;
+  height: 900px;
+  padding: 40px 20px 100px 20px;
+
+}
+
+.resume_in_list {
+  height: 80px;
+  width: 90%;
+  display: block;
+  background-color: #1e304c;
+  margin-top: 20px;
+  border-radius: 10px;
+
+}
+
+.resume_delete_button {
+background-color: red;
+color: white;
+width: 130px;
+height: 30px;
+border-style: none;
+border-radius: 5px;
+font-size: 20px;
+display: block;
+margin: 0px auto;
+}
+
+.resume_title {
+
+  display: inline-block;
+  width: 40%;
+  height: 50%;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.resume_delete {
+
+  display: inline-block;
+  width: 40%;
+  height: 50%;
+  margin: 20px;
+  overflow: hidden;
+}

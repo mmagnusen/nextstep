@@ -1,5 +1,5 @@
 var mainDiv = document.getElementById("content_div");
-mainDiv.addEventListener("mouseup", clickedOnEmptyLine);
+mainDiv.addEventListener("dblclick", clickedOnEmptyLine);
 var modalChildren = document.getElementsByClassName('imageClass');
 var getContentWrapper = document.getElementById("content_wrapper");
 var xMouse;
@@ -12,6 +12,8 @@ const mediaArray = [
 
 //////// checks to see if an image hover is already showing
 function clickedOnEmptyLine() {
+  console.log('event target');
+  console.log(event.target.parentElement);
   checkForExistingModal();
   showCoords(event);
 }
@@ -45,6 +47,7 @@ function createModal () {
   newModal.style.opacity = '1';
   newModal.style.left = '30%';
   newModal.style.top = '20%';
+  newModal.id = 'image_modal';
   getContentWrapper.appendChild(newModal);
 
       //shows what's currently in imageChildren 'array'
@@ -59,10 +62,21 @@ function createModal () {
   createExit.style.borderRadius = '30px';
   createExit.style.display = 'inline';
   createExit.innerHTML = '<i class="fa fa-times"></i>';
+  createExit.id = 'exit';
   createExit.style.left = '440px';
   createExit.style.top = '10px';
   createExit.style.position = 'relative';
   newModal.appendChild(createExit);
+
+  var close = document.getElementById('exit');
+  console.log('close button clicked');
+
+  close.addEventListener('click', exit, false);
+
+  function exit() {
+    console.log('close button clicked');
+    document.getElementById('image_modal').remove();
+  }
 
 
   var createTopDiv = document.createElement('div');
