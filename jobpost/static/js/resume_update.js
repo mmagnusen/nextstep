@@ -1,6 +1,7 @@
 //var bodyElement = document.getElementsByTagName("BODY")[0];
 //bodyElement.addEventListener("onload", updateCV);
 var cv_name = document.getElementById('cv_name_div');
+var content_editable = document.getElementById('content_div');
 
 window.onload = function() {
 

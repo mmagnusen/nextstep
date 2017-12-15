@@ -23,10 +23,7 @@ function sendAjax() {
   xhr.onreadystatechange = function () {
    if (this.readyState === 4) {
      console.log('state === 4, image sent');
-     var newNode = document.createElement('button');
-     var parentNode  document.createRange();
-
-     parentNode.insertBefore(newNode, );
+     
 
    }
   };

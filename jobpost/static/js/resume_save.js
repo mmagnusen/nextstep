@@ -1,5 +1,3 @@
-var save_button = document.getElementById('save_resume_button');
-save_button.addEventListener("click", saveCV);
 
 var content_editable = document.getElementById('content_div');
 

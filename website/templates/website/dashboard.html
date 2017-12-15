@@ -50,6 +50,7 @@
                                 </div>
                           </div>
                         {% for resume in resumes %}
+                          
                             <div class='resume_in_list'>
                                   <div class='resume_title'>
                                         <a href="{% url 'resume_detail' pk=resume.pk %}">
@@ -62,6 +63,7 @@
                                       </a>
                                   </div>
                             </div>
+
                         {% endfor %}
                 </div>
 

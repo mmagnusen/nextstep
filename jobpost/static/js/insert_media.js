@@ -1,9 +1,6 @@
-var mainDiv = document.getElementById("content_div");
-mainDiv.addEventListener("dblclick", clickedOnEmptyLine);
+
 var modalChildren = document.getElementsByClassName('imageClass');
-var getContentWrapper = document.getElementById("content_wrapper");
-var xMouse;
-var yMouse;
+var main = document.getElementById('content_div');
 
 //////// array of images in image hover
 const mediaArray = [
@@ -11,19 +8,42 @@ const mediaArray = [
 ]
 
 //////// checks to see if an image hover is already showing
-function clickedOnEmptyLine() {
-  console.log('event target');
-  console.log(event.target.parentElement);
-  checkForExistingModal();
-  showCoords(event);
+function clickedOnEmptyLine(e) {
+console.log('getting caret position');
+var range;
+var textNode;
+var offset;
+
+if (document.caretPositionFromPoint) {
+    range = document.caretPositionFromPoint(e.clientX, e.clientY);
+    textNode = range.offsetNode;
+    offset = range.offset;
+
+
+  } else if (document.caretRangeFromPoint) {
+    range = document.caretRangeFromPoint(e.clientX, e.clientY);
+    textNode = range.startContainer;
+    offset = range.startOffset;
+  }
+
 }
 
-function showCoords(event) {
-    xMouse = event.clientX;
-    yMouse = event.clientY;
-      console.log(xMouse, yMouse);
+function showImageIcon(e) {
+  var icon = document.getElementById('image_icon_id');
+  var x = e.pageX;
+  var y = e.pageY;
+  icon.style.display = 'block';
+  icon.style.left = '910px';
+  icon.style.top = y + 'px';
+  console.log("x is" + x, 'y is' + y)
+
+  var ctl = document.getElementById('content_div');
+    var startPos = ctl.selectionStart;
+    var endPos = ctl.selectionEnd;
+    console.log(startPos + ", " + endPos);
 
 }
+
 
 //////// if image hover isn't showing, creates it and vice versa
 function checkForExistingModal() {
@@ -48,7 +68,7 @@ function createModal () {
   newModal.style.left = '30%';
   newModal.style.top = '20%';
   newModal.id = 'image_modal';
-  getContentWrapper.appendChild(newModal);
+  mainDiv.appendChild(newModal);
 
       //shows what's currently in imageChildren 'array'
       console.log(modalChildren);
@@ -117,38 +137,6 @@ function createModal () {
 
 }
 
-/*
-  THIS WORKS, BUT I NEED TO DISCONNECT FROM AJAX FILE
-  AAAAAND IT REFRESHES ON SUBMIT
-  var getTopDiv = document.getElementById('topDivID');
-  getTopDiv.addEventListener('click', makeTopDivClickable);
-  function makeTopDivClickable() {
-
-    console.log('top image div clicked');
-    var createImageForm = document.createElement('form');
-    var imageInputNode = document.createTextNode("");
-    createImageForm.appendChild(imageInputNode);
-    createImageForm.setAttribute('method', 'post');
-    createImageForm.setAttribute('action', 'image_save/');
-    createImageForm.setAttribute('enctype', 'multipart/form-data');
-
-    var i = document.createElement('input');
-    i.setAttribute("name", "file")
-    i.type = 'file';
-    i.id = 'file';
-
-    var s = document.createElement('input');
-    s.setAttribute('type', 'submit');
-    s.setAttribute('value', 'submit');
-    s.setAttribute('name', 'submit');
-
-    createTopDiv.appendChild(createImageForm);
-    createImageForm.appendChild(i);
-    createImageForm.appendChild(s);
-
-  }
-
-  */
 
 
   var createBottomDiv = document.createElement('div');

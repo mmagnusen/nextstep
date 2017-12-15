@@ -1,9 +1,7 @@
 //variables for storing elements
 
-
 var mainDiv = document.getElementById("content_div");
 var children = document.getElementsByClassName('tooltip_class');
-var menu = document.getElementById('return_to_dashboard');
 var inner = mainDiv.innerHTML;
 
 var xMouse;
@@ -24,6 +22,8 @@ var cmndArray = [
   ['justifyFull', '<i class="fa fa-align-justify"></i>']
       ];
 mainDiv.addEventListener("mouseup", createRange);
+mainDiv.addEventListener("mouseup", showImageIcon);
+
 
 //checking if user has selected any text
 function createRange(e) {
@@ -35,11 +35,15 @@ function createRange(e) {
     if ( selectionRange > 0 ) {
     checkForExistingTooltips()
 
+
   } else if ( children.length > 0) {
 hideToolTip();
 
+
   } else {
     hideToolTip();
+
+
   }
 }
 
@@ -109,20 +113,7 @@ function hideToolTip() {
   }
 }
 
-menu.addEventListener('click', createMenu);
 
-function createMenu() {
-var createMenu = document.createElement('div');
-createMenu.style.display = 'block';
-createMenu.style.width='30px';
-createMenu.style.height='30px';
-createMenu.style.margin='7px';
-createMenu.style.backgroundColor = 'green';
-createMenu.style.left = '500px';
-createMenu.style.top = '100px';
-
-document.getElementById('resume_menu').appendChild(createMenu);
-}
 
 /* old css for downward pointer on tooltip
 .tooltip_class::after {

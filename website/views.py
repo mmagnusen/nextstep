@@ -19,7 +19,7 @@ from resume.models import Resume
 # Create your views here.
 def dashboard(request):
     companys = Company.objects.all()
-    resumes = Resume.objects.all()
+    resumes = Resume.objects.filter(owner = request.user)
     return render(request, 'website/dashboard.html', {'resumes': resumes})
 
 def index(request):

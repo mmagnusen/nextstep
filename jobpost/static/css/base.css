@@ -45,29 +45,6 @@ a:link {
 text-decoration: none;
 }
 
-.sign-in-header {
-  text-align: center;
-
-}
-.email-field {
-  height: 40px;
-  width: 300px;
-  padding: 5px;
-  margin: 20px;
-}
-
-.password-field {
-  height: 40px;
-  width: 300px;
-  padding: 5px;
-  margin: 20px;
-}
-
-.sign-in-button {
-  width: 400px;
-  min-height: 40px;
-}
-
 #home_button {
 background-color: #00B9CE;
 color: white;
@@ -156,42 +133,7 @@ ol {
   padding-right: 20px;
 }
 
-/****************************************************
 
-                  home page styles
-
-*****************************************************/
-homepage_wrapper {
-  color: grey;
-
-}
-#index_1 {
-  height: 700px;
-  padding: 80px 120px;
-}
-
-#index_2 {
-  background-color: #00B9CE;
-  height: 700px;
-  padding: 80px 120px;
-}
-
-#index_3 {
-
-  height: 700px;
-  padding: 80px 120px;
-}
-
-#index_4 {
-  background-color: #00B9CE;
-  height: 700px;
-  padding: 80px 120px;
-}
-
-#index_5 {
-  height: 700px;
-  padding: 80px 120px;
-}
 /****************************************************
 
                   jobs page styles

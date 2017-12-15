@@ -5,6 +5,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 
 class Resume(models.Model):
@@ -12,6 +13,7 @@ class Resume(models.Model):
     name = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
     content = models.TextField(default='Default resume content')
+    
 
     def publish(self):
         self.published_date = timezone.now()

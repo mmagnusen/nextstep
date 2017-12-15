@@ -20,8 +20,13 @@ def resume_new(request):
     return redirect('resume_detail', pk=newResume.pk)
 
 def resume_detail(request, pk):
+    viewer = request.user
     resume = get_object_or_404(Resume, pk=pk)
-    return render(request, 'resume/resume_detail.html', {'resume': resume})
+    if viewer == resume.owner:
+        return render(request, 'resume/resume_detail.html', {'resume': resume})
+    else:
+        return render(request, 'resume/resume_no_permission.html', {'resume': resume})
+
 
 @csrf_exempt
 def resume_update(request, pk):

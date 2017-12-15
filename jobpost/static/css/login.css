@@ -1,10 +1,17 @@
+#login_wrapper{
+  height: 700px;
+  padding-top: 100px;
+}
+
+
 form {
   background-color: #edeeef;
   width: 550px;
-  margin: 40px auto;
+  margin: 80px auto;
   border-radius: 5px;
   font-family: 'Noto Sans', sans-serif;
   padding-bottom: 5px;
+  display: block;
 }
 
 #fields {
@@ -23,13 +30,10 @@ fieldset {
   height: 40px;
 }
 
-
 #username_field {
   display: block;
   margin: 15px;
   border-radius: 2px;
-
-
 }
 
 #password_field {
@@ -55,17 +59,6 @@ fieldset {
   border-width: 2px
 }
 
-.login_button {
-
-  background-color: #71d68e;
-  width: 140px;
-  height: 40px;
-  text-align: center;
-  margin: 30px auto;
-  display: block;
-  color: white;
-}
-
 .form_icon {
   margin: 20px; 0px 0px 0px;
 }
@@ -78,4 +71,15 @@ fieldset {
   padding: 30px 0px 60px 0px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+.login_button {
+  background-color: #71d68e;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  margin: 30px auto;
+  display: block;
+  color: white;
+  border-style: none;
 }
