@@ -6,6 +6,7 @@
     <script src="https://use.fontawesome.com/5f01ab2269.js"></script>
     <link href="{% static 'css/text.css' %}" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hind|Mukta|Noto+Sans|Nunito+Sans" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
     <div id='resume_menu'>
@@ -19,19 +20,27 @@
             <div id='cv_name_div'>
               <p>Enter a name for your CV here</p>
             </div>
-            <div id='image_icon_id'></div>
+            <div id='share_url_div'>
+              <p>264506c98e074251a326bb83580714ae</p>
+            </div>
+            <div id='tracker_caret_id'></div>
             <div class='cv' contenteditable="true" id='content_div'>
 
             </div>
         </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
     <script type="text/javascript" src="{% static 'js/resume_save.js' %}" ></script>
     <script type="text/javascript" src="{% static 'js/insert_media.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/caret_tracker.js' %}" ></script>
     <script type="text/javascript" src="{% static 'js/content.js' %}" ></script>
     <script type="text/javascript" src="{% static 'js/exit_button.js' %}" ></script>
     <script type="text/javascript" src="{% static 'js/insert_media_ajax.js' %}" ></script>
     <script type="text/javascript" src="{% static 'js/resume_update.js' %}" ></script>
-    <script type="text/javascript" src="{% static 'js/word_count.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/slideshow_ajax.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/slideshow.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/generate_share_url.js' %}" ></script>
+
+
 
   </body>
 </html>

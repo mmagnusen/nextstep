@@ -22,7 +22,7 @@ var cmndArray = [
   ['justifyFull', '<i class="fa fa-align-justify"></i>']
       ];
 mainDiv.addEventListener("mouseup", createRange);
-mainDiv.addEventListener("mouseup", showImageIcon);
+
 
 
 //checking if user has selected any text

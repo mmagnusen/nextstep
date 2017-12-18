@@ -6,7 +6,10 @@ from django.contrib import admin
 # Register your models here.
 
 from .models import Resume
+from .models import SlideShow
 from .models import SingleImage
 
+
 admin.site.register(Resume)
+admin.site.register(SlideShow)
 admin.site.register(SingleImage)

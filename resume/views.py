@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.utils import timezone
 from .models import Resume
+from .models import SlideShow
 from .models import SingleImage
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.models import User
@@ -27,13 +28,25 @@ def resume_detail(request, pk):
     else:
         return render(request, 'resume/resume_no_permission.html', {'resume': resume})
 
+@csrf_exempt
+def resume_share(request, share_url):
+    resume = Resume.objects.get(share_url=share_url)
+    return render(request, 'resume/resume_share.html', {'resume': resume})
 
 @csrf_exempt
 def resume_update(request, pk):
     resume = get_object_or_404(Resume, pk=pk)
     cv_content_from_db = resume.content
     name = resume.name
-    json_object = {'content': cv_content_from_db, 'name': name}
+    url = resume.share_url
+    json_object = {'content': cv_content_from_db, 'name': name, 'url': url}
+    return JsonResponse(json_object)
+
+@csrf_exempt
+def resume_populate(request, share_url):
+    resume = Resume.objects.get(share_url=share_url)
+    content = resume.content
+    json_object = {'content': content}
     return JsonResponse(json_object)
 
 
@@ -68,4 +81,19 @@ def single_image_save(request, pk):
         newImage = SingleImage(owner= request.user, name = 'image name', parentCV = resume, image = userImage)
         newImage.save()
         json_object = {'content': 'hello', 'name': 'some name'}
+        return JsonResponse(json_object)
+
+@csrf_exempt
+def create_slide_show(request, pk):
+    if request.method == 'POST':
+        resume = get_object_or_404(Resume, pk=pk)
+        newSlideshow = SlideShow(owner=request.user, parentCV=resume)
+        newSlideshow.save()
+        json_object = {'slideshowPK': newSlideshow.pk}
+        return JsonResponse(json_object)
+
+@csrf_exempt
+def unpack_images(request, pk):
+    if request.method == 'POST':
+        json_object = {'slideshowPK': 'newSlideshow.pk'}
         return JsonResponse(json_object)

@@ -72,13 +72,29 @@ createMenuThree.style.left = '500px';
 createMenuThree.style.top = '100px';
 createMenu.appendChild(createMenuThree);
 
+var createMenuFour = document.createElement('div');
+var nodeFour = document.createTextNode("View Share URL");
+createMenuFour.appendChild(nodeFour);
+
+createMenuFour.style.display = 'block';
+createMenuFour.style.width='250px';
+createMenuFour.style.height='40px';
+createMenuFour.style.margin='7px';
+createMenuFour.id = 'createMenuFourID';
+createMenuFour.style.left = '500px';
+createMenuFour.style.top = '100px';
+
+createMenu.appendChild(createMenuFour);
+
 var resumeOne = document.getElementById('createMenuOneID');
 var resumeTwo = document.getElementById('createMenuTwoID');
 var resumeThree = document.getElementById('createMenuThreeID');
+var resumeFour = document.getElementById('createMenuFourID');
 
 
 resumeOne.addEventListener('click', returnToDashboard);
 resumeTwo.addEventListener('click', saveCV);
+resumeFour.addEventListener('click', generateShareUrl);
 }
 
 

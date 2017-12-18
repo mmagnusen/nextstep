@@ -10,8 +10,6 @@ function startImageAjax() {
 
 function sendAjax() {
 
-  console.log('sending ajax');
-  //debugger;
   var input = document.getElementById('file');
   var formData = new FormData();
   var file = input.files[0];
@@ -23,7 +21,8 @@ function sendAjax() {
   xhr.onreadystatechange = function () {
    if (this.readyState === 4) {
      console.log('state === 4, image sent');
-     
+     insertImageIntoContentDiv();
+
 
    }
   };
@@ -31,5 +30,19 @@ function sendAjax() {
   xhr.open('POST', 'image_save/');
   var data = 'testing data';
   xhr.send(formData);
+
+}
+
+function insertImageIntoContentDiv(){
+  console.log('image inserted into content editable!');
+  var image = document.createElement('img');
+  image.id = 'userImage';
+  image.setAttribute('src', 'https://picsum.photos/200/300/?random');
+  var main = document.getElementById('content_div');
+  main.appendChild(image);
+
+  var closeModal = document.getElementById('large_image_modal');
+  closeModal.parentNode.removeChild(closeModal);
+
 
 }
