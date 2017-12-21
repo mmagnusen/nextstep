@@ -41,8 +41,8 @@
 
 
                 <div id='resume_list_dashboard'>
-                          <div id='resume_list_new'>
-                                <div id='resume_list'>
+                          <div id='resume_list_title_outer'>
+                                <div id='resume_list_title'>
                                       <h1>Resume list</h1>
                                 </div>
                                 <div id='new_cv'>
@@ -50,7 +50,7 @@
                                 </div>
                           </div>
                         {% for resume in resumes %}
-                          
+
                             <div class='resume_in_list'>
                                   <div class='resume_title'>
                                         <a href="{% url 'resume_detail' pk=resume.pk %}">

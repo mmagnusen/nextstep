@@ -16,7 +16,7 @@ from django.http import JsonResponse
 
 # Create your views here.
 def resume_new(request):
-    newResume = Resume(name='testy', created_date = timezone.now(), owner = request.user )
+    newResume = Resume(name='Please enter CV name', created_date = timezone.now(), owner = request.user, url='something', path='something path' )
     newResume.save()
     return redirect('resume_detail', pk=newResume.pk)
 
@@ -63,6 +63,15 @@ def resume_save(request, pk):
         resume.publish()
         return render(request, 'resume/resume_detail.html', {'resume': resume})
 
+@csrf_exempt
+def resume_save_name(request, pk):
+    if request.method == 'POST':
+        resume  = get_object_or_404(Resume, pk=pk)
+        resume.name = request.body
+        resume.save()
+        json_object = {'status': 'lovely lovely, resume name updated'}
+        return JsonResponse(json_object)
+
 
 def resume_list(request):
     resumes = Resume.objects.all()
@@ -80,7 +89,7 @@ def single_image_save(request, pk):
         userImage = request.FILES['file']
         newImage = SingleImage(owner= request.user, name = 'image name', parentCV = resume, image = userImage)
         newImage.save()
-        json_object = {'content': 'hello', 'name': 'some name'}
+        json_object = {'content': 'hello', 'name': 'some name', 'url': newImage.image.url}
         return JsonResponse(json_object)
 
 @csrf_exempt

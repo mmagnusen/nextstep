@@ -5,11 +5,6 @@ body {
   background-color: #e3ecf9;
 }
 
-h1 {
-  color: white;
-  padding: 0px;
-  margin: 0px;
-}
 
 #resume_list_dashboard h1 {
   color: #1e304c;
@@ -19,15 +14,18 @@ h1 {
   text-decoration: none;
   color: #eaedf2;
 }
+
 p {
   font-size: 20px;
   color: white;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   font-size: 30px;
+  margin: 0;
+  padding: 0;
 
 
 }
@@ -48,11 +46,8 @@ text-decoration: none;
   width: 80%;
   margin: 30px auto;
   min-height: 1500px;
-  border: 0px 0px 70px 0px;
-
   clear: both;
   display: block;
-
 }
 
 #dashboard_title {
@@ -68,28 +63,29 @@ text-decoration: none;
 
 #dashboard_title h1 {
   font-size: 40px;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 #welcome_message {
-  display: block;
+  display: inline-block;
   float: left;
-  margin: 130px 30px 0px 180px;
+  margin: 130px 30px 0 180px;
+  width: 600px;
 }
 
 #logout {
   width: 100px;
-  display: block;
+  display: inline-block;
   float: right;
 }
 
 #account_details {
   height: 250px;
+  width: 1050px;
   display: block;
-  margin: 20px 10px 50px 10px;
+  margin: 0 auto;
   padding: 20px 20px 20px 20px;
-  clear: both;
 
 
 }
@@ -99,7 +95,7 @@ text-decoration: none;
   display: inline;
   float: left;
   background-color: #27b2d8;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
 }
 
 .profile_image {
@@ -113,16 +109,16 @@ text-decoration: none;
   display: inline;
   float: right;
   background-color: #27b2d8;
-  border-radius: 0px 10px 20px 0px;
+  border-radius: 0 10px 20px 0;
   box-sizing: border-box;
-  padding: 20px 0px 0px 20px;
+  padding: 20px 0 0 20px;
 }
 
 #your_details {
   display: block;
   height: 50px;
   width: 80%;
-  padding: 0px 0px 0px 30px;
+  padding: 0 0 0 30px;
   margin: 15px 10px 10px 10px;
 
 }
@@ -130,7 +126,7 @@ text-decoration: none;
   display: block;
   height: 80px;
   width: 80%;
-  padding: 0px 0px 0px 30px;
+  padding: 0 0 0 30px;
   margin: 15px 10px 10px 10px;
 
 }
@@ -148,9 +144,8 @@ text-decoration: none;
     display: inline;
     width: 80%;
     height: 80px;
-    padding: 0px 0px 0px 30px;
+    padding: 0 0 0 30px;
     margin: 15px 10px 10px 10px;
-
 }
 
 #name {
@@ -161,58 +156,71 @@ text-decoration: none;
   display: inline;
   min-width: 50px;
 }
-#resume_list_new {
-
+#resume_list_title_outer {
   height: 100px;
-  width: 100%;
+  width: 1000px;
+  margin: 14px auto;
+
+  display: block;
 }
 
-#resume_list {
+#resume_list_title {
 
-  height: 40px;
-  width: 50%;
+  height: 60px;
+  width: 700px;
   display: inline-block;
-  margin: 25px 10px 10px 10px;
+  margin: 20px;
+  overflow: hidden;
+  float: left;
 }
 
 #new_cv {
 
-  height: 40px;
-  width: 40%;
+  height: 60px;
+  width: 200px;
+  margin: 20px;
   display: inline-block;
+  float: right;
+  padding-top: 15px;
 }
 
 .new_cv_button {
   background-color: #27b2d8;
-  width: 130px;
-  height: 40px;
   color: white;
-  border-radius: 10px;
+  width: 150px;
+  height: 35px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  display: block;
+  margin: 0;
+  text-align: center;
+  float: right;
 }
 
 #cv_list {
-  height: 1050px;
-
+  height: 95%;
+  width: 1050px;
   display: block;
-  clear: left;
-  margin: 50px auto;
-  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
+
 }
 
 #resume_list_dashboard {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  height: 900px;
-  padding: 40px 20px 100px 20px;
-
+  height: 1200px;
+  padding: 20px 0px 20px 0px;
+  display: block;
 }
 
 .resume_in_list {
-  height: 80px;
-  width: 90%;
+  height: 100px;
+  width: 1000px;
   display: block;
   background-color: #1e304c;
-  margin-top: 20px;
+  margin: 14px auto;
   border-radius: 10px;
 
 }
@@ -220,29 +228,31 @@ text-decoration: none;
 .resume_delete_button {
 background-color: red;
 color: white;
-width: 130px;
-height: 30px;
+width: 150px;
+height: 35px;
 border-style: none;
 border-radius: 5px;
 font-size: 20px;
-display: block;
-margin: 0px auto;
+display: inline-block;
+margin: 0;
+text-align: center;
+float: right;
 }
 
 .resume_title {
-
   display: inline-block;
-  width: 40%;
-  height: 50%;
+  width: 700px;
+  height: 35px;
   margin: 20px;
-  overflow: hidden;
+  float: left;
 }
 
 .resume_delete {
 
   display: inline-block;
-  width: 40%;
-  height: 50%;
+  width: 200px;
+  height: 60px;
   margin: 20px;
   overflow: hidden;
+  float: right;
 }

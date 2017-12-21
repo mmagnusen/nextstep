@@ -23,7 +23,10 @@ def dashboard(request):
     return render(request, 'website/dashboard.html', {'resumes': resumes})
 
 def index(request):
-    return render(request, 'website/index.html')
+    if not request.user.is_authenticated:
+        return render(request, 'website/index.html')
+    else:
+        return render(request, 'website/dashboard.html')
 
 def about_us(request):
     return render(request, 'website/about_us.html')

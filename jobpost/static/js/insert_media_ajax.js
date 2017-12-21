@@ -1,3 +1,6 @@
+var halfUrl = "http://127.0.0.1:8000";
+var newImageUrl;
+
 function startImageAjax() {
 
   var selectedFileList = document.querySelectorAll('input');
@@ -21,9 +24,10 @@ function sendAjax() {
   xhr.onreadystatechange = function () {
    if (this.readyState === 4) {
      console.log('state === 4, image sent');
+     var data = xhr.response;
+     var parsed = JSON.parse(data);
+     newImageUrl = parsed.url;
      insertImageIntoContentDiv();
-
-
    }
   };
 
@@ -33,16 +37,21 @@ function sendAjax() {
 
 }
 
+console.log(newImageUrl);
+
 function insertImageIntoContentDiv(){
   console.log('image inserted into content editable!');
   var image = document.createElement('img');
   image.id = 'userImage';
-  image.setAttribute('src', 'https://picsum.photos/200/300/?random');
+  var fullUrl = halfUrl + newImageUrl;
+  image.setAttribute('src', fullUrl);
   var main = document.getElementById('content_div');
   main.appendChild(image);
 
   var closeModal = document.getElementById('large_image_modal');
   closeModal.parentNode.removeChild(closeModal);
+  console.log(newImageUrl);
+  console.log(fullUrl);
 
 
 }

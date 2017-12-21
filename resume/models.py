@@ -37,6 +37,7 @@ class SingleImage(models.Model):
     image_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200, default='sample name')
 
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()

@@ -1,12 +1,12 @@
 #registration_wrapper{
-  height: 700px;
-  padding-top: 100px;
+  height: 200px;
+  padding-top: 0px;
 }
 
 form {
   background-color: #edeeef;
   width: 550px;
-  margin: 40px auto;
+  margin: 20px auto;
   border-radius: 5px;
   font-family: 'Noto Sans', sans-serif;
   padding-bottom: 5px;

@@ -1,27 +1,14 @@
-{% extends 'base_logged_in.html' %}
+{% extends 'base_logged_out.html' %}
 {% load staticfiles %}
 
 {% block content %}
 <div id ='homepage_wrapper'>
     <div id="index_1">
-      <h1>The light-weight editor for creating your CV</h1>
-      <img src="{{STATIC_URL}}static/images/cv_example.png" alt="marilyns image" width="1000" height="600" />
+        <div id="index_description">
+            <h1>The light-weight editor for creating your CV</h1>
+        </div>
+        <img src="{{STATIC_URL}}static/images/cv.png" alt="marilyns image" width="1000" height="600" />
+    </div>
 
-    </div>
-    <div id="index_2">
-      <h1>Clutter free. Free up your space with no toolbar</h1>
-    </div>
-    <div id="index_3">
-      <p>Edit inline as you go along</p>
-    </div>
-    <div id="index_4">
-      <p>Create links to share your CV with employers/p>
-    </div>
-    <div id="index_5">
-      <p>The right job deserves the best CV</p>
-      <div id="home_button_div">
-        <a href='/jobs'> <button id="post_jobs_button">Get Started</button></a>
-      </div>
-    </div>
 </div>
 {% endblock %}

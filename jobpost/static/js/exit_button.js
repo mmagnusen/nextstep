@@ -13,22 +13,14 @@ function createOrHideMenu() {
   } else {
     createMenu()
     }
-
 }
 
 function createMenu() {
 var createMenu = document.createElement("div");
 var node = document.createTextNode("");
 createMenu.appendChild(node);
-
-createMenu.style.display = 'block';
-createMenu.style.width ='270px';
-createMenu.style.height ='100px';
-createMenu.style.margin ='7px';
 createMenu.id = 'newMenu';
-createMenu.style.left = '1120px';
-createMenu.style.top = '100px';
-resume_menu.appendChild(createMenu);
+resume_ellipses.appendChild(createMenu);
 
 var createMenuOne = document.createElement('div');
 var nodeOne = document.createTextNode("");
@@ -58,19 +50,6 @@ createMenuTwo.style.left = '500px';
 createMenuTwo.style.top = '100px';
 createMenu.appendChild(createMenuTwo);
 
-var createMenuThree = document.createElement('div');
-var getName = document.getElementById('cv_name_div').innerHTML;
-var nodeThree = document.createTextNode(getName);
-createMenuThree.appendChild(nodeThree);
-
-createMenuThree.style.display = 'block';
-createMenuThree.style.width='250px';
-createMenuThree.style.height='40px';
-createMenuThree.style.margin='7px';
-createMenuThree.id = 'createMenuThreeID';
-createMenuThree.style.left = '500px';
-createMenuThree.style.top = '100px';
-createMenu.appendChild(createMenuThree);
 
 var createMenuFour = document.createElement('div');
 var nodeFour = document.createTextNode("View Share URL");
@@ -104,4 +83,6 @@ function removeExitMenu() {
     exitMenu.parentNode.removeChild(exitMenu);
       }
 
-function returnToDashboard() {}
+function returnToDashboard() {
+  saveCV();
+}

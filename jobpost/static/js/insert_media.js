@@ -2,12 +2,17 @@
 
 //////// tells me the caret's been clicked on and calls function to create image modal
 function caretClicked() {
-    console.log('clicked on carettttt');
     createModal();
+
+
+  //  iconToRemove.style.display = 'none';
 }
 
 
-function createModal () {
+function createModal() {
+    var removeTooltip = document.getElementById('tooltipId');
+    removeTooltip.parentNode.removeChild(removeTooltip);
+
     var newModal = document.createElement('div');
 
     newModal.className = 'newModalClass';
@@ -74,4 +79,7 @@ function exitImageModal() {
     console.log('image modal close button clicked');
     exitModal = document.getElementById('large_image_modal');
     exitModal.parentNode.removeChild(exitModal);
+
+    var removeTooltip = document.getElementById('tooltipId');
+    removeTooltip.parentNode.removeChild(removeTooltip);
 }

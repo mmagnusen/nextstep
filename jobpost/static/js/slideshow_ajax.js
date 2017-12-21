@@ -24,11 +24,10 @@ function sendImages() {
   var input = document.getElementById('input');
   var formData = new FormData();
   var files = input.files;
-  files.forEach(function( element, index ) {
-      formData.append('file', files[index]);
-  })
 
-  var xhrSlideShowImages = new XMLHttpRequest = function() {
+
+  var xhrSlideShowImages = new XMLHttpRequest;
+  xhrSlideShowImages.onreadystatechange = function() {
     if (this.readyState === 4) {
         createSlideShow();
 
@@ -38,9 +37,11 @@ function sendImages() {
   xhrSlideShowImages.send(formData);
 }
 
+
+
 function createSlideShow() {
 
   var newSlideshowDiv = document.createElement('img');
   var main = document.getElementById('content_div');
-  main.appendChild(newSlideshow);
+  main.appendChild(newSlideshowDiv);
 }

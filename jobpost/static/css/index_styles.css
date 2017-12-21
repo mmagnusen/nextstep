@@ -5,44 +5,29 @@
 *****************************************************/
 homepage_wrapper {
   color: grey;
-
 }
+
 #index_1 {
   background-color: white;
   height: 700px;
-  padding: 80px 120px;
+  padding: 150px 0px 20px 0px;
+
 }
 
-#index_2 {
-  background-color: ;
-  height: 700px;
-  padding: 80px 120px;
-}
-
-#index_3 {
-
-  height: 700px;
-  padding: 80px 120px;
-}
-
-#index_4 {
-  background-color: #00B9CE;
-  height: 700px;
-  padding: 80px 120px;
-}
-
-#index_5 {
-  height: 700px;
-  padding: 80px 120px;
-}
-
-#index_1 h1 {
+#index_description {
+  width: 1000px;
+  height: 150px;
+  background-color: white;
   font-size: 50px;
+  margin: 0 auto;
   text-align: center;
-  margin: 60 0 60 0;
+}
+
+#index_description h1 {
+  font-size: 50px;
 }
 
  img {
    display: block;
-  margin: auto;
+   margin: 0 auto;
 }

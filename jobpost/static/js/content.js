@@ -9,8 +9,8 @@ var yMouse;
 
 //an array listing all exec commands and button icons
 var cmndArray = [
-  ['fontSize', 's', '3px'],
-  ['fontSize', 'm', '5px'],
+  ['fontSize', 's', '4px'],
+  ['fontSize', 'm', '6px'],
   ['fontSize', 'l', '7px'],
   ['bold', '<i class="fa fa-bold"></i>'],
   ['italic', '<i class="fa fa-italic"></i>'],
@@ -19,7 +19,8 @@ var cmndArray = [
   ['justifyLeft', '<i class="fa fa-align-left"></i>'],
   ['justifyCenter', '<i class="fa fa-align-center"></i>'],
   ['justifyRight', '<i class="fa fa-align-right"></i>'],
-  ['justifyFull', '<i class="fa fa-align-justify"></i>']
+  ['justifyFull', '<i class="fa fa-align-justify"></i>'],
+  ['insertImage', '<i class="fa fa-picture-o">']
       ];
 mainDiv.addEventListener("mouseup", createRange);
 
@@ -65,11 +66,8 @@ function checkForExistingTooltips() {
       var newTip = document.createElement('div');
       var node = document.createTextNode("");
       newTip.appendChild(node);
-      newTip.style.display = 'block';
-      newTip.style.width='500px';
-      newTip.style.height='50px';
-      newTip.style.backgroundColor = '#2e3238';
       newTip.className = "tooltip_class";
+      newTip.id = 'tooltipId';
       newTip.style.left = xMouse + "px";
       newTip.style.top = yMouse + "px";
 
@@ -95,10 +93,12 @@ function checkForExistingTooltips() {
       }
       var buttonList = document.querySelectorAll('.button_classs');
       buttonList.forEach( function( element, index ) {
-      if ( index < 4) {
+      if ( index < 3) {
       element.addEventListener("click", function() { document.execCommand(cmndArray[index][0], false, cmndArray[index][2])});
-    } else {
+    } else if(index > 2 && index < 11){
       element.addEventListener("click", function() { document.execCommand(cmndArray[index][0])});
+    } else {
+      element.addEventListener("click", caretClicked, false);
     }
         })
     }
@@ -113,17 +113,9 @@ function hideToolTip() {
   }
 }
 
-
+var changeResumeName = document.getElementById('cv_name_div');
+changeResumeName.addEventListener('blur', saveResumeNameS);
 
 /* old css for downward pointer on tooltip
-.tooltip_class::after {
-  content: "";
-  position: relative;
-  top: 30%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 10px;
-  border-style: solid;
-  border-color: #2e3238 transparent transparent transparent;
-}
+
 */

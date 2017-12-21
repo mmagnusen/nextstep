@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^resume/(?P<pk>\d+)/no_permission/$', views.resume_save, name='resume_no_permission'),
     url(r'^resume/(?P<pk>\d+)/unpack_images/$', views.unpack_images, name='unpack_images'),
     url(r'^resume/(?P<pk>\d+)/create_slide_show/$', views.create_slide_show, name='create_slide_show'),
+    url(r'^resume/(?P<pk>\d+)/save_name/$', views.resume_save_name, name='resume_save_name'),
     url(r'^resume/(?P<pk>\d+)/save/$', views.resume_save, name='resume_save'),
     url(r'^resume/(?P<pk>\d+)/delete/$', views.resume_delete, name='resume_delete'),
     url(r'^resume/(?P<pk>\d+)/update/$', views.resume_update, name='resume_update'),
