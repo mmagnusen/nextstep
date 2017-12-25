@@ -1,9 +1,10 @@
+from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from company.models import Company
 
 class Post(models.Model):
-    author = models.ForeignKey('auth.User')
+    author = models.ForeignKey(settings.AUTH_USER_MODEL)
     location = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
     description = models.TextField()

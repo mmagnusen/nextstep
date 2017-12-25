@@ -23,7 +23,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^/user/dashboard/company/', include('company.urls')),
-    url(r'^/user/dashboard/', include('website.urls')),
     url(r'^/user/register/', include('website.urls')),
     url(r'^login/', auth_views.login),
     url(r'^logout/', auth_views.logout),

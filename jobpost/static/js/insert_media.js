@@ -54,7 +54,8 @@ function createModal() {
 
     var getFile = document.getElementById('file');
     getFile.addEventListener('change', startImageAjax());
-
+/*
+  COMMENTING OUT AS DON'T NEED SLIDESHOW CAPABILTY YET
     var createBottomDiv = document.createElement('div');
     var bottomDivNode = document.createTextNode("");
     createBottomDiv.appendChild(bottomDivNode);
@@ -71,7 +72,7 @@ function createModal() {
     bottom.appendChild(slideShowDiv);
     bottom.addEventListener('click', addSlideShow);
 
-
+*/
 }
 
 

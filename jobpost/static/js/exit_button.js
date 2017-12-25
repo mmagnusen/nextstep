@@ -20,7 +20,9 @@ var createMenu = document.createElement("div");
 var node = document.createTextNode("");
 createMenu.appendChild(node);
 createMenu.id = 'newMenu';
+resume_ellipses.innerHTML = '<i class="fa fa-times"></i>';
 resume_ellipses.appendChild(createMenu);
+
 
 var createMenuOne = document.createElement('div');
 var nodeOne = document.createTextNode("");
@@ -81,6 +83,8 @@ resumeFour.addEventListener('click', generateShareUrl);
 function removeExitMenu() {
     var exitMenu = document.getElementById('newMenu');
     exitMenu.parentNode.removeChild(exitMenu);
+
+    resume_ellipses.innerHTML = '<i class="fa fa-ellipsis-h fa-2x"></i>';
       }
 
 function returnToDashboard() {

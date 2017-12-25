@@ -16,7 +16,7 @@ from django.http import JsonResponse
 
 # Create your views here.
 def resume_new(request):
-    newResume = Resume(name='Please enter CV name', created_date = timezone.now(), owner = request.user, url='something', path='something path' )
+    newResume = Resume(name='Please enter CV name', created_date = timezone.now(), owner = request.user)
     newResume.save()
     return redirect('resume_detail', pk=newResume.pk)
 

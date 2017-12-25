@@ -89,3 +89,28 @@ fieldset {
   color: white;
   border-style: none;
 }
+
+#register_user_type {
+  width: 400px;
+  margin: 0 0 0 40px;
+}
+
+#type_label {
+  width: 120px;
+  height: 100px;
+  display: inline-block;
+  float: left;
+}
+.type {
+  width: 100px;
+  height: 30px;
+  margin: 5px 0 0 0;
+
+}
+
+#options {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  padding-top: 10px;
+}
