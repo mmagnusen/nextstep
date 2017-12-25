@@ -19,16 +19,25 @@ from resume.models import Resume
 
 
 # Create your views here.
+def dashboard(request):
+    companys = Company.objects.all()
+    resumes = Resume.objects.filter(owner = request.user)
+    if request.user.groups.filter(name='employee').exists():
+        return render(request, 'website/employee_dashboard.html', {'resumes': resumes})
+    else:
+        return render(request, 'website/employer_dashboard.html', {'resumes': resumes})
+
+
 def employee_dashboard(request):
-    if not request.user.groups.filter(name='employee').exists():
-        raise Exception("You don't have access to this page")
+#    if not request.user.groups.filter(name='employee').exists():
+#        raise Exception("You don't have access to this page")
     companys = Company.objects.all()
     resumes = Resume.objects.filter(owner = request.user)
     return render(request, 'website/employee_dashboard.html', {'resumes': resumes})
 
 def employer_dashboard(request):
-    if not request.user.groups.filter(name='employer').exists():
-        raise Exception("You don't have access to this page")
+#    if not request.user.groups.filter(name='employer').exists():
+#        raise Exception("You don't have access to this page")
     companys = Company.objects.all()
     resumes = Resume.objects.filter(owner = request.user)
     return render(request, 'website/employer_dashboard.html', {'resumes': resumes})
