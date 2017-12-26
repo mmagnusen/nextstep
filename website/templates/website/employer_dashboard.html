@@ -36,29 +36,69 @@
                               <p id='user_name'>{{ user.username }}</p>
                           </div>
                     </div>
+              </div>
+
+              <div id='all_companies'>
+                    <div id="company_intro">
+                        <div id="company_section_title">
+                            <h1>Companies</h1>
+                        </div>
+                        <div id="create_new_company">
+                          <a href="{% url 'company_new' %}"><button id="create_new_company_button">Create new company</button></a>
+                        </div>
+                    </div>
+                    <div id="companies_list">
+                        {% for company in companys %}
+
+                            <div class='company'>
+                                <div class="company_title">
+                                    <a href="{% url 'company_detail' pk=company.pk %}">
+                                      <h4>{{ company.name }}</h4>
+                                    </a>
+                                </div>
+                                <div class="company_delete_button_div">
+                                  <a href="{% url 'company_delete' pk=company.pk %}">
+                                    <button class="company_delete_button"> Delete</button>
+                                  </a>
+                                </div>
+                            </div>
+
+                      {% endfor %}
+                    </div>
             </div>
-            <div id='cv_list'>
-
-
-                <div id='resume_list_dashboard'>
-                          <div id='resume_list_title_outer'>
-                                <div id='resume_list_title'>
-                                      <h1>Companies</h1>
-                                </div>
-                                <div id='new_cv'>
-                                      <a href="{% url 'resume_new' %}"> <button class="new_cv_button" id='create_new_cv_dashboard'>Create new Company</button></a>
-                                </div>
-                          </div>
-
+            <div id="all_jobs">
+                <div id="jobs_intro">
+                    <div id="jobs_section_title">
+                      <h1>Jobs</h1>
+                    </div>
+                    <div id="create_new_job">
+                        <a href="{% url 'post_new' %}"><button id="create_new_job_button">Create New Job</button></a>
+                    </div>
                 </div>
 
+                <div id="jobs_list">
+                    {% for post in posts %}
+
+                    <div class="single_jobs">
+                          <div class="post_title_div">
+                              <a href="{% url 'post_edit' pk=post.pk %}">
+                                  <h4>{{ post.title }}</h4>
+                              </a>
+                          </div>
+                          <div class="post_delete_button_div">
+                              <a href="{% url 'post_delete' pk=post.pk %}">
+                                <button class="post_delete_button">Delete</button>
+                              </a>
+                          </div>
+                    </div>
 
 
-
-
-
+                    {% endfor %}
+                </div>
 
             </div>
+
         </div>
+
   </body>
 </html>

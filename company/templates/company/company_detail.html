@@ -1,30 +1,42 @@
 {% extends 'base_logged_in.html' %}
 
 {% block content %}
-<div class='title_div'>
-    <div class='company_title'>
-      <h1>{{company.title}}</h1>
-    </div>
-    <a href="/user/dashboard/">
-      <div id='return_to_dashboard'>
-          <h1> <<<   Return to dashboard</h1>
+  <div id="detail_wrapper">
+      <a href="/user/dashboard/">
+        <div id='return_to_dashboard'>
+            <h1>Return to dashboard</h1>
+        </div>
+      </a>
+
+      <div id="company_name_div">
+          <div id="company_name_title"><h1>Company name:</h1></div>
+          <div id="company_actual_name"> <h1> {{company.name}}</h1></div>
       </div>
-    </a>
-</div>
 
-<div id='individual_company_wrapper'>
+      <div id="date_div">
+          <div id="created_on"><h1> Created on </h1></div>
+          <div id="actual_creation_date"><h1>{{ company.created_date }} </h1></div>
+      </div>
 
 
-    {% if company.created_date %}
+      <div id="description_div">
+          <div id="description_title"><h1>Company Description:</h1></div>
+          <div id="actual_description"><p>{{ company.description }}</p></div>
+      </div>
 
-    <div class='date'>
-        <p> Created on {{ company.created_date }} </p>
-    </div>
-    {% endif %}
+      <div id="logos">
+          <div id="small_company_logo">
+              <h1>Small logo:</h1><img id="small_logo_image" src="{{ company.small_logo.url }}">
+          </div>
+          <div id="large_company_logo">
+              <h1>Large logo:</h1><img id="large_logo_image"src="{{ company.large_logo.url }}">
+          </div>
+      </div>
 
-    <div class='description'>
-      <p>{{ company.description }}</p>
-    </div>
-    <a href="{% url 'company_edit' pk=company.pk %}"><button class='button'>Edit company details</button></a>
-</div>
+      <div id="edit_company">
+        <a href="{% url 'company_edit' pk=company.pk %}"><button class='button'>Edit company details</button></a>
+      </div>
+
+
+  </div>
 {% endblock %}

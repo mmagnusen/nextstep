@@ -22,10 +22,16 @@ p {
   margin: 0;
 }
 
+h4 {
+  padding: 0px;
+  color: white;
+}
+
 a {
   font-size: 30px;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 
 
 }
@@ -86,9 +92,8 @@ text-decoration: none;
   display: block;
   margin: 0 auto;
   padding: 20px 20px 20px 20px;
-
-
 }
+
 #left_block {
   width: 49%;
   height: 250px;
@@ -128,7 +133,6 @@ text-decoration: none;
   width: 80%;
   padding: 0 0 0 30px;
   margin: 15px 10px 10px 10px;
-
 }
 
 #email {
@@ -156,6 +160,7 @@ text-decoration: none;
   display: inline;
   min-width: 50px;
 }
+
 #resume_list_title_outer {
   height: 100px;
   width: 1000px;
@@ -254,5 +259,194 @@ float: right;
   height: 60px;
   margin: 20px;
   overflow: hidden;
+  float: right;
+}
+
+/************************
+    COMPANIES
+*************************/
+#all_companies {
+  height: 400px;
+  width: 1100px;
+  display: block;
+  margin: 0 auto;
+  background-color: green;
+}
+
+#company_intro {
+  width: 1100px;
+  height: 70px;
+  display: block;
+  background-color: grey;
+}
+
+#company_section_title {
+  width: 500px;
+  height: 70px;
+  display: inline-block;
+  float: left;
+  padding: 0 0 0 40px;
+  background-color: pink;
+}
+
+#create_new_company {
+  height: 45px;
+  width: 200px;
+  display: inline-block;
+  float: right;
+  padding: 25px 20px 0 40px;
+  background-color: yellow;
+}
+
+#create_new_company_button {
+  background-color: #27b2d8;
+  color: white;
+  width: 200px;
+  height: 35px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  display: block;
+  margin: 0;
+  text-align: center;
+  float: right;
+}
+
+#companies_list {
+  background-color: orange;
+  margin: 0 auto;
+  height: 300px;
+  display: block;
+}
+
+.company {
+  color: white;
+  height: 150px;
+  width: 1050px;
+  display: block;
+  background-color: #1e304c;
+  margin: 14px auto;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.company_title {
+  display: inline-block;
+  float: left;
+  width: 400px;
+  height: 100px;
+  background-color: yellow;
+}
+
+.company_delete_button_div {
+  background-color: purple;
+  height: 70px;
+  width: 200px;
+  display: inline-block;
+  float: right;
+}
+
+.company_delete_button {
+
+  background-color: red;
+  color: white;
+  width: 150px;
+  height: 35px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  float: right;
+}
+
+#all_jobs {
+  height: 600px;
+  width: 1050px;
+  display: block;
+  margin: 0 auto;
+}
+
+#jobs_intro {
+  width: 1050px;
+  height: 80px;
+  display: block;
+}
+
+
+#jobs_section_title {
+  width: 700px;
+  height: 70px;
+  float: left;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0px 0px 0px 40px;
+}
+
+#create_new_job {
+  height: 45px;
+  width: 210px;
+  float: right;
+  padding: 25px 10px 0 0px;
+}
+
+#create_new_job_button {
+  background-color: #27b2d8;
+  color: white;
+  width: 200px;
+  height: 35px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  display: block;
+  margin: 0;
+  text-align: center;
+  float: right;
+}
+
+#jobs_list{
+
+}
+
+.single_jobs {
+  color: white;
+  height: 80px;
+  width: 1050px;
+  display: block;
+  background-color: #1e304c;
+  margin: 14px auto;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.post_title_div {
+  background-color:
+  display: inline-block;
+  width: 300px;
+  height: 70px;
+  float: left;
+}
+
+.post_delete_button_div {
+
+  display: inline-block;
+  width: 300px;
+  height: 35px;
+  float: right;
+  padding: 30px 0 0 0;
+}
+
+.post_delete_button {
+  background-color: red;
+  color: white;
+  width: 150px;
+  height: 35px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
   float: right;
 }

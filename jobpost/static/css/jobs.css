@@ -1,0 +1,70 @@
+/****************************************************
+
+                  jobs page styles
+
+*****************************************************/
+#jobs_title {
+  background-color: #ECECEC;
+  height: 200px;
+  width: 100%;
+  margin: 0 0 30px 0;
+  padding: 100 0 0 0;
+}
+
+#jobs_title h1 {
+  font-size: 100px;
+  color: #202020;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+
+#jobs_list {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 50px 50px 50px;
+}
+
+.post {
+  height: 100px;
+  margin: 0px;
+  padding: 30px;
+  border-top-color: grey;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.post:hover {
+  background-color: #DCEAFF;
+}
+
+.post h1 {
+  color: #202020;
+}
+
+.post p {
+  color: #666666;
+}
+
+.post:nth-child(odd) {
+  background-color: #ECECEC;
+}
+
+.post:nth-child(odd):hover {
+  background-color: #DCEAFF;
+}
+
+.job_list_company_logo {
+  display: inline-block;
+  float: left;
+  width: 200px;
+  height: 100px;
+
+}
+
+.job_post_text {
+  display: inline-block;
+  float: right;
+  width: 500px;
+}

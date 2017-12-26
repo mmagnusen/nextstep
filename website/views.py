@@ -15,32 +15,33 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth import views as auth_views
 from company.models import Company
 from resume.models import Resume
+from jobpost.models import Post
 
 
 
 # Create your views here.
 def dashboard(request):
-    companys = Company.objects.all()
+    companys = Company.objects.filter(owner = request.user)
     resumes = Resume.objects.filter(owner = request.user)
+    posts = Post.objects.filter(author = request.user)
     if request.user.groups.filter(name='employee').exists():
         return render(request, 'website/employee_dashboard.html', {'resumes': resumes})
     else:
-        return render(request, 'website/employer_dashboard.html', {'resumes': resumes})
+        return render(request, 'website/employer_dashboard.html', {'posts': posts, 'companys': companys})
 
 
 def employee_dashboard(request):
 #    if not request.user.groups.filter(name='employee').exists():
 #        raise Exception("You don't have access to this page")
-    companys = Company.objects.all()
     resumes = Resume.objects.filter(owner = request.user)
     return render(request, 'website/employee_dashboard.html', {'resumes': resumes})
 
 def employer_dashboard(request):
 #    if not request.user.groups.filter(name='employer').exists():
 #        raise Exception("You don't have access to this page")
-    companys = Company.objects.all()
-    resumes = Resume.objects.filter(owner = request.user)
-    return render(request, 'website/employer_dashboard.html', {'resumes': resumes})
+    companys = Company.objects.filter(owner = request.user)
+    posts = Post.objects.filter(author = request.user)
+    return render(request, 'website/employer_dashboard.html', {'posts': posts, 'companys': companys})
 
 def index(request):
     if not request.user.is_authenticated:

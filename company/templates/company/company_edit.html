@@ -4,8 +4,22 @@
 
 <div id='new_company_wrapper'>
     <h1>Create a new company</h1>
-    <form method="POST">{% csrf_token %}
-      {{ form.as_p }}
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+      <div>
+      {{ form.name }}
+      </div>
+      <div>
+      {{ form.description}}
+      </div>
+      <div>
+        <p>Small Logo</p>
+      {{ form.small_logo}}
+      </div>
+      <div>
+        <p>Large Logo</p>
+      {{ form.large_logo}}
+      </div>
+
       <button type="submit">Submit</button>
     </form>
 </div>
