@@ -4,12 +4,34 @@ from django.utils import timezone
 from company.models import Company
 
 class Post(models.Model):
-    FULLTIME = 'FT'
-    PARTTIME = 'PT'
-    HOURS_CHOICES = (
-        (FULLTIME, 'Fulltime'),
-        (PARTTIME, 'Partime'),
+
+    PERMANENT = 'Permanent'
+    CONTRACT = 'Contract'
+    DURATION_CHOICES = (
+        (PERMANENT, 'Permanent'),
+        (CONTRACT, 'Contract'),
     )
+
+
+    FULLTIME = 'Full-time'
+    PARTTIME = 'Part-time'
+    HOURS_CHOICES = (
+        (FULLTIME, 'Full-time'),
+        (PARTTIME, 'Part-time'),
+    )
+
+    INTERN = 'Intern'
+    JUNIOR = 'Junior'
+    MID = 'Mid-Level'
+    SENIOR = 'Senior'
+    EXPERIENCE_CHOICES = (
+        (INTERN, 'Intern'),
+        (JUNIOR, 'Junior'),
+        (MID, 'Mid'),
+        (SENIOR, 'Senior'),
+    )
+
+
 
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     location = models.CharField(max_length=200)
@@ -18,11 +40,12 @@ class Post(models.Model):
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    duration = models.CharField(max_length=2, choices=HOURS_CHOICES, default=FULLTIME)
-    hours = models.CharField(max_length=2, choices=HOURS_CHOICES, default=FULLTIME)
-    experience = models.CharField(max_length=200, default="sfsdf")
-    salary = models.CharField(max_length=200, default="sfsdf")
+    duration = models.CharField(max_length=20, choices=DURATION_CHOICES, default=PERMANENT)
+    hours = models.CharField(max_length=20, choices=HOURS_CHOICES, default=FULLTIME)
+    experience = models.CharField(max_length=20, choices=EXPERIENCE_CHOICES, default=INTERN)
+    salary = models.CharField(max_length=20, default="Competitive")
     owned_by_company = models.ForeignKey('company.Company', default=1, on_delete=models.CASCADE, related_name="comp", related_query_name="comps")
+    application_link = models.CharField(max_length=500, default='/')
 
 
     def publish(self):

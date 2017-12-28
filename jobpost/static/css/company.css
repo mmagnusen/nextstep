@@ -10,6 +10,10 @@
   font-size: 25px;
 }
 
+#detail_wrapper a {
+  color: #c10050;
+}
+
 #detail_wrapper {
   width: 900px;
   margin: 100px auto;
@@ -67,10 +71,28 @@
   width: 300px;
 }
 
+#company_website_div {
+  height: 50px;
+  width: 900px;
+}
+
+#company_website_title {
+  display: inline-block;
+  height: 40px;
+  width: 220px;
+  float: left;
+}
+
+#company_actual_website {
+  display: inline-block;
+  height: 40px;
+  width: 300px;
+}
+
 #description_div {
   height: 370px;
   width: 900px;
-  margin: 60px 0 0 0;
+  margin: 80px 0 0 0;
 }
 
 #description_title {
@@ -97,7 +119,7 @@ overflow: scroll;
   width: 90px;
 }
 #large_company_logo {
-  margin: 30px 0 0 0;
+
 }
 
 #large_logo_image {

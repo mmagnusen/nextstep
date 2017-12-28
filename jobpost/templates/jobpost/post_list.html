@@ -10,17 +10,28 @@
         {% for post in posts %}
           <div class='post'>
             <a href="{% url 'post_detail' pk=post.pk %}">
-              <div class="job_list_company_logo">
-                <img src="{{ post.owned_by_company.small_logo.url }}"></img>
-              </div>
-              <div class="job_post_text">
-                <p>{{ post.title }}</p>
-                <p> {{ post.owned_by_company }} </p>
+                  <div class="job_list_company_logo">
+                    <img src="{{ post.owned_by_company.small_logo.url }}"></img>
+                  </div>
 
-                <p> <i class="fa fa-map-marker"></i>{{ post.location }} </p>
-                 <div></div>
+                  <div class="column_one">
+                    <p>{{ post.title }}</p>
+                    <p> {{ post.owned_by_company }} </p>
 
-              </div>
+                    <p> <i class="fa fa-map-marker"></i>{{ post.location }} </p>
+                     <div></div>
+                  </div>
+
+                  <div class="column_two">
+                    <p>{{ post.created_date }}</p>
+                    <p>{{ post.duration}}</p>
+                  </div>
+
+                  <div class="column_three">
+                    <p>{{ post.hours }} </p>
+                    <p>{{ post.experience }} </p>
+                    <p>{{ post.salary }} </p>
+                  </div>
             </a>
           </div>
         {% endfor %}

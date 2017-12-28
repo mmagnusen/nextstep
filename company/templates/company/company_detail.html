@@ -18,7 +18,10 @@
           <div id="actual_creation_date"><h1>{{ company.created_date }} </h1></div>
       </div>
 
-
+      <div id="company_website_div">
+        <div id="company_website_title"><h1>Website:</h1></div>
+        <div id="company_actual_website"><h1><a href="{{ company.website }}">{{ company.website }}</a> </h1></div>
+      </div>
       <div id="description_div">
           <div id="description_title"><h1>Company Description:</h1></div>
           <div id="actual_description"><p>{{ company.description }}</p></div>

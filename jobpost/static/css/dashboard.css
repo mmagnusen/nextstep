@@ -24,6 +24,7 @@ p {
 
 h4 {
   padding: 0px;
+  margin: 20px 0px 0px 0px;
   color: white;
 }
 
@@ -266,27 +267,24 @@ float: right;
     COMPANIES
 *************************/
 #all_companies {
-  height: 400px;
+  min-height: 200px;
   width: 1100px;
   display: block;
   margin: 0 auto;
-  background-color: green;
 }
 
 #company_intro {
   width: 1100px;
   height: 70px;
   display: block;
-  background-color: grey;
 }
 
 #company_section_title {
   width: 500px;
-  height: 70px;
+  height: 60px;
   display: inline-block;
   float: left;
   padding: 0 0 0 40px;
-  background-color: pink;
 }
 
 #create_new_company {
@@ -295,7 +293,6 @@ float: right;
   display: inline-block;
   float: right;
   padding: 25px 20px 0 40px;
-  background-color: yellow;
 }
 
 #create_new_company_button {
@@ -313,15 +310,15 @@ float: right;
 }
 
 #companies_list {
-  background-color: orange;
   margin: 0 auto;
-  height: 300px;
+  min-height: 200px;
+  width: 1100px;
   display: block;
 }
 
 .company {
   color: white;
-  height: 150px;
+  height: 80px;
   width: 1050px;
   display: block;
   background-color: #1e304c;
@@ -334,16 +331,16 @@ float: right;
   display: inline-block;
   float: left;
   width: 400px;
-  height: 100px;
-  background-color: yellow;
+  height: 40px;
+  padding: 0px 0 30px 0;
 }
 
 .company_delete_button_div {
-  background-color: purple;
   height: 70px;
   width: 200px;
   display: inline-block;
   float: right;
+  padding: 20px 0 0 0;
 }
 
 .company_delete_button {
@@ -359,13 +356,15 @@ float: right;
   margin: 0;
   text-align: center;
   float: right;
+
 }
 
 #all_jobs {
-  height: 600px;
-  width: 1050px;
-  display: block;
+  min-height: 600px;
   margin: 0 auto;
+  min-height: 300px;
+  width: 1100px;
+  display: block;
 }
 
 #jobs_intro {
@@ -376,7 +375,7 @@ float: right;
 
 
 #jobs_section_title {
-  width: 700px;
+  width: 750px;
   height: 70px;
   float: left;
   display: inline-block;
@@ -386,9 +385,11 @@ float: right;
 
 #create_new_job {
   height: 45px;
-  width: 210px;
+  width: 200px;
+  display: inline-block;
   float: right;
-  padding: 25px 10px 0 0px;
+  padding: 25px 20px 0 40px;
+  margin-right: -50px;
 }
 
 #create_new_job_button {

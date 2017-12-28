@@ -2,7 +2,9 @@
 
 {% block content %}
 <div id='new_post_wrapper'>
-    <h1>Post a new job</h1>
+    <div id="edit_title">
+        <h1>Create / Edit Your Job</h1>
+    </div>
     <form method="POST">{% csrf_token %}
       {{ form.as_p }}
       <button type="submit">Submit</button>

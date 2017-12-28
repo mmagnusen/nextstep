@@ -1,14 +1,14 @@
 /****************************************************
 
-                  jobs page styles
+                  jobs page styles (entire jobs list)
 
 *****************************************************/
 #jobs_title {
   background-color: #ECECEC;
-  height: 200px;
+  height:150px;
   width: 100%;
   margin: 0 0 30px 0;
-  padding: 100 0 0 0;
+  padding: 50px 0px 30px 0px;
 }
 
 #jobs_title h1 {
@@ -21,13 +21,16 @@
 
 
 #jobs_list {
-  width: 70%;
+  width: 1000px;
+  height: 600px;
   margin: 0 auto;
   padding: 50px 50px 50px 50px;
+  overflow: scroll;
 }
 
 .post {
-  height: 100px;
+  width: 950px;
+  height: 150px;
   margin: 0px;
   padding: 30px;
   border-top-color: grey;
@@ -44,7 +47,9 @@
 }
 
 .post p {
-  color: #666666;
+  color: #292e35;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
 }
 
 .post:nth-child(odd) {
@@ -59,12 +64,31 @@
   display: inline-block;
   float: left;
   width: 200px;
-  height: 100px;
+  height: 130px;
 
 }
 
-.job_post_text {
+.column_one {
   display: inline-block;
-  float: right;
-  width: 500px;
+  float: left;
+  width: 230px;
+  height: 150px;
+  margin: 0 0 0 10px;
+}
+
+
+.column_two {
+  display: inline-block;
+  float: left;
+  width: 230px;
+  height: 150px;
+  margin: 0 0 0 10px;
+}
+
+.column_three {
+  display: inline-block;
+  float: left;
+  width: 230px;
+  height: 150px;
+  margin: 0 0 0 10px;
 }

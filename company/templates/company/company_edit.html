@@ -1,25 +1,13 @@
+
 {% extends 'base_logged_in.html' %}
 
 {% block content %}
-
-<div id='new_company_wrapper'>
-    <h1>Create a new company</h1>
+<div id='new_post_wrapper'>
+    <div id="edit_title">
+        <h1>Create / Edit Your Company</h1>
+    </div>
     <form method="POST" enctype="multipart/form-data">{% csrf_token %}
-      <div>
-      {{ form.name }}
-      </div>
-      <div>
-      {{ form.description}}
-      </div>
-      <div>
-        <p>Small Logo</p>
-      {{ form.small_logo}}
-      </div>
-      <div>
-        <p>Large Logo</p>
-      {{ form.large_logo}}
-      </div>
-
+      {{ form.as_p }}
       <button type="submit">Submit</button>
     </form>
 </div>
