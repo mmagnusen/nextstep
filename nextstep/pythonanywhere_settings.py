@@ -10,3 +10,5 @@ DATABASES = {
         'PORT': '10625',
     }
 }
+
+ALLOWED_HOSTS = ['marilynmags.pythonanywhere.com', 'thenextstep.io']
