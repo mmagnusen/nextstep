@@ -8,31 +8,36 @@
   <div id="jobs_list">
 
         {% for post in posts %}
-          <div class='post'>
-            <a href="{% url 'post_detail' pk=post.pk %}">
-                  <div class="job_list_company_logo">
-                    <img src="{{ post.owned_by_company.small_logo.url }}"></img>
-                  </div>
+          <div class="post">
+              <a href="{% url 'post_detail' pk=post.pk %}">
+                    <div class="job_list_company_logo">
+                      <img src="{{ post.owned_by_company.small_logo.url }}" class="actual_company_logo"></img>
+                    </div>
 
-                  <div class="column_one">
-                    <p>{{ post.title }}</p>
-                    <p> {{ post.owned_by_company }} </p>
+                    <div class="text">
+                        <div class="text_upper">
+                          <p class="title">{{ post.title }} <span class="connector">at</span> {{ post.owned_by_company }}</p>
+                        </div>
 
-                    <p> <i class="fa fa-map-marker"></i>{{ post.location }} </p>
-                     <div></div>
-                  </div>
+                        <div class="text_lower">
+                            <div class="column_one">
+                                <div class="map"> <i class="fa fa-map-marker"></i></div>
+                                <div class="location"><p>{{ post.location }}</p></div>
+                                <p class="duration">{{ post.duration}}</p>
+                            </div>
 
-                  <div class="column_two">
-                    <p>{{ post.created_date }}</p>
-                    <p>{{ post.duration}}</p>
-                  </div>
+                            <div class="column_two">
+                              <p>{{ post.created_date }}</p>
+                              <p>{{ post.hours }} </p>
+                            </div>
 
-                  <div class="column_three">
-                    <p>{{ post.hours }} </p>
-                    <p>{{ post.experience }} </p>
-                    <p>{{ post.salary }} </p>
+                            <div class="column_three">
+                              <p>{{ post.experience }} </p>
+                              <p>{{ post.salary }} </p>
+                            </div>
+                        </div>
                   </div>
-            </a>
+              </a>
           </div>
         {% endfor %}
 </div>

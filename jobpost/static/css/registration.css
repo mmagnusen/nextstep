@@ -114,3 +114,55 @@ fieldset {
   width: 100px;
   padding-top: 10px;
 }
+
+input[name=first_name]{
+  background-color: #dee1e5;
+  border-style: none;
+  height: 35px;
+  width: 250px;
+  outline: none;
+  display: inline;
+  float: left;
+  margin: 12px 0 0 14px;
+}
+
+input[name=last_name]{
+  background-color: #dee1e5;
+  border-style: none;
+  height: 35px;
+  width: 250px;
+  outline: none;
+  display: inline;
+  float: left;
+  margin: 12px 0 0 14px;
+}
+
+input[name=email]{
+  background-color: #dee1e5;
+  border-style: none;
+  height: 35px;
+  width: 250px;
+  outline: none;
+  display: inline;
+  float: left;
+  margin: 12px 0 0 14px;
+}
+
+input[name=first_name]:focus {
+  border-style: solid;
+  border-color: #71d68e;
+
+  border-width: 2px
+}
+input[name=last_name]:focus {
+  border-style: solid;
+  border-color: #71d68e;
+
+  border-width: 2px
+}
+input[name=email]:focus {
+  border-style: solid;
+  border-color: #71d68e;
+
+  border-width: 2px
+}

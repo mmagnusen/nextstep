@@ -3,22 +3,22 @@
                   jobs page styles (entire jobs list)
 
 *****************************************************/
+
 #jobs_title {
-  background-color: #ECECEC;
+  background-color: #DCEAFF;
   height:150px;
-  width: 100%;
-  margin: 0 0 30px 0;
+  width: 1200px;
+  margin: 60px auto;
   padding: 50px 0px 30px 0px;
 }
 
 #jobs_title h1 {
   font-size: 100px;
-  color: #202020;
+  color: white;
   text-align: center;
   padding: 0;
   margin: 0;
 }
-
 
 #jobs_list {
   width: 1000px;
@@ -28,18 +28,23 @@
   overflow: scroll;
 }
 
+#jobs_list a:visited {
+  color: inherit;
+}
+
 .post {
   width: 950px;
   height: 150px;
   margin: 0px;
-  padding: 30px;
+  padding: 15px;
   border-top-color: grey;
-  border-top-style: solid;
+  border-top-style: dotted;
   border-top-width: 1px;
 }
 
 .post:hover {
   background-color: #DCEAFF;
+  transition: all 200ms ease;
 }
 
 .post h1 {
@@ -47,13 +52,12 @@
 }
 
 .post p {
-  color: #292e35;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 20px;
 }
 
 .post:nth-child(odd) {
-  background-color: #ECECEC;
+
 }
 
 .post:nth-child(odd):hover {
@@ -65,23 +69,86 @@
   float: left;
   width: 200px;
   height: 130px;
+  padding: 20px 0 0 0;
 
+}
+
+.actual_company_logo {
+  width: 90px;
+  height: 90px;
+}
+
+.text {
+  display: inline-block;
+  float: left;
+  width: 700px;
+  height: 150px;
+  margin: 0 0 0 10px;
+}
+
+.text_upper {
+  height: 50px;
+  width: 700px;
+  display: block;
+  float: left;
+  margin: 0 0 0 0;
+}
+
+.title {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  color: #f44271;
+}
+
+.connector {
+  display: inline-block;
+  margin-right: 5px;
+  color: #202020;
+}
+
+
+.company_name {
+  color:
+  height: 50px;
+  display: inline-block;
+  float: left;
+}
+
+.text_lower {
+  color: #202020;
 }
 
 .column_one {
   display: inline-block;
   float: left;
-  width: 230px;
-  height: 150px;
-  margin: 0 0 0 10px;
+  width: 200px;
+  height: 100px;
+  margin: 0 0 0 0px;
 }
 
+.map {
+  margin-right: 1px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+.location {
+  display: inline-block;
+  height: 15px;
+  width: 20px;
+}
+
+.duration {
+  margin-left: 25px;
+}
 
 .column_two {
   display: inline-block;
   float: left;
   width: 230px;
-  height: 150px;
+  height: 100px;
   margin: 0 0 0 10px;
 }
 
@@ -90,5 +157,5 @@
   float: left;
   width: 230px;
   height: 150px;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0px;
 }

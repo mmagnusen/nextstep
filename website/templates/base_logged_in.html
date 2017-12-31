@@ -2,27 +2,34 @@
 <!DOCTYPE>
 <html>
   <head>
-    <title>Job List</title>
+    <title>Next Step - Resume Editor</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}">
     <link rel="stylesheet" href="{% static 'css/company.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jobs.css' %}">
     <link rel="stylesheet" href="{% static 'css/job_listing.css' %}">
-      <link rel="stylesheet" href="{% static 'css/job_edit.css' %}">
-    <script src="https://use.fontawesome.com/5f01ab2269.js"></script>
+    <link rel="stylesheet" href="{% static 'css/job_edit.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Archivo:500" rel="stylesheet">
+  <script src="https://use.fontawesome.com/5f01ab2269.js"></script>
   </head>
   <body>
-    <div id="header">
-      <div id="title">
-        <h1>Tech Jobs</h1>
-      </div>
-      <div id="navigation">
-        <ul>
-          <li><a href='/'>Home</a></li>
-          <li><a href='/jobs'>Jobs</a></li>
-          <li><a href='https://medium.com/@NextStepCoders'>Blog</a></li>
-          <li><a href='/logout'> Logout</a></li>
-        </ul>
-      </div>
+    <div id="outer_header">
+        <div id="inner_header">
+            <div id="title">
+                <a href='/'>The Next Step</a>
+            </div>
+            <div id="navigation">
+              <ul>
+                <li><a href='/jobs'> Jobs </a></li>
+                <li><a href='https://medium.com/@NextStepCoders'>Blog</a></li>
+                <li><a href='/user/register'> Register </a></li>
+                <li><a href='/logout'> Logout </a></li>
+              </ul>
+            </div>
+        </div>
     </div>
     <div id="wrapper">
           <div>
@@ -32,5 +39,24 @@
         </div>
     </div>
 
+    <div id="footer">
+      <div id="footer_outer">
+          <div id="footer_1">
+            <h1>Hello!</h1>
+            <p>Welcome to The Next Step. We’re a London based community, organising
+              coding workshops, meet-ups and help to land your dream job.</p>
+              <a href='/jobs'><button class='button'> Get started</button></a>
+          </div>
+
+          <div id="footer_2">
+            <ol>
+              <li><h1>Info</h1></li>
+              <li><h2><a href='/site/contact_us'>Contact Us</a></h2></l1>
+              <li><h2><a href='/site/about_us'>About Us</a></h2></l1>
+              <li><h2><a href='https://medium.com/@NextStepCoders'>Blog</a></h2></l1>
+            </ol>
+          </div>
+      </div>
+    </div>
   </body>
 </html>

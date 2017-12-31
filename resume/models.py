@@ -13,7 +13,7 @@ class Resume(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
-    content = models.TextField(default='Default resume content')
+    content = models.TextField(default='Start typing to create your resume...')
     share_url = models.UUIDField(default=uuid.uuid4, editable=True, unique=True)
 
     def publish(self):
