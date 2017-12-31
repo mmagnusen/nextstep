@@ -2,7 +2,6 @@ var anchor = document.getElementById('resume_menu');
 
 function generateShareUrl() {
 
-console.log('share url generating');
 var showUrl = document.createElement('div');
 var urlNode = document.createTextNode('');
 showUrl.appendChild(urlNode);
@@ -17,14 +16,12 @@ anchor.appendChild(showUrl);
 var createRef = document.createElement('a');
 var t = document.createTextNode("Follow Share URL");
 createRef.appendChild(t);
-console.log(createRef);
-var urlStart = 'http://127.0.0.1:8000/resume/resume/';
+var urlStart = 'http://thenextstep.io/resume/resume/';
 var urlMiddle = document.getElementById('share_url_div').textContent;
 var urlEnd = '/share/';
 var raw = urlStart + urlMiddle + urlEnd;
 var rawToString = raw.toString();
 var fullShareUrl = rawToString.replace(/\s/g,'')
-console.log(fullShareUrl);
 createRef.setAttribute('href', fullShareUrl );
 showUrl.appendChild(createRef);
 

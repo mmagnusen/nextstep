@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from company.models import Company
+from django import forms
 
 class Post(models.Model):
 
@@ -34,10 +35,10 @@ class Post(models.Model):
 
 
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
-    location = models.CharField(max_length=200)
-    title = models.CharField(max_length=200)
+    location = models.CharField(max_length=50)
+    title = models.CharField(max_length=40)
     description = models.TextField()
-    created_date = models.DateTimeField(
+    created_date = models.DateField(
             default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     duration = models.CharField(max_length=20, choices=DURATION_CHOICES, default=PERMANENT)
@@ -46,7 +47,6 @@ class Post(models.Model):
     salary = models.CharField(max_length=20, default="Competitive")
     owned_by_company = models.ForeignKey('company.Company', default=1, on_delete=models.CASCADE, related_name="comp", related_query_name="comps")
     application_link = models.CharField(max_length=500, default='/')
-
 
     def publish(self):
         self.published_date = timezone.now()

@@ -19,8 +19,11 @@ def post_detail(request, pk):
     return render(request, 'jobpost/post_detail.html', {'post': post})
 
 def post_new(request):
+    this_user_pk = request.user.pk
     if request.method == 'POST':
-        form = PostForm(request.POST, user=request.user)
+        form = PostForm(request.user, request.POST)
+        form.fields['owned_by_company'].queryset = company.Company.objects.filter(pk=1)
+
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
@@ -41,7 +44,7 @@ def post_edit(request, pk):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('post_detail', pk=post.pk)
+            return redirect('/user/dashboard', pk=post.pk)
 
     else:
         form = PostForm(instance=post)

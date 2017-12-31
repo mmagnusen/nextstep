@@ -15,5 +15,3 @@ class PostForm(forms.ModelForm):
                         'experience',
                         'salary',
                         'application_link')
-
-        

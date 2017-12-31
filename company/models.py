@@ -11,10 +11,10 @@ logo_large_default = 'website_defaults/logo_large_default.png'
 
 class Company(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL)
-    name = models.CharField(max_length=200, default='Default company name')
+    name = models.CharField(max_length=200, default='Enter company name')
     website = models.CharField(max_length=200, default='/')
     created_date = models.DateTimeField(default=timezone.now)
-    description = models.TextField(default='Default company description')
+    description = models.TextField(default='Enter company description')
     small_logo = models.ImageField(upload_to='user_single_images/', default=logo_small_default, blank=True)
     large_logo = models.ImageField(upload_to='user_single_images/', default=logo_large_default, blank=True)
 

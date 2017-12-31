@@ -18,9 +18,6 @@ var cmndArray = [
   ['underline', '<i class="fa fa-underline"></i>'],
   ['justifyLeft', '<i class="fa fa-align-left"></i>'],
   ['justifyCenter', '<i class="fa fa-align-center"></i>'],
-  ['justifyRight', '<i class="fa fa-align-right"></i>'],
-  ['justifyFull', '<i class="fa fa-align-justify"></i>'],
-  ['insertImage', '<i class="fa fa-picture-o">']
       ];
 mainDiv.addEventListener("mouseup", createRange);
 
