@@ -1,0 +1,73 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Dashboard </title>
+    <script src="https://use.fontawesome.com/5f01ab2269.js"></script>
+    <link href="{% static 'css/dashboard.css' %}" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="dashboard_title">
+
+          <div id='logout'>
+              <a href='/logout'> Logout</a>
+          </div>
+          <div id='welcome_message'>
+              <h1>Your Dashboard</h1>
+          </div>
+    </div>
+        <div id='dashboard_wrapper'>
+            <div id='account_details'>
+                    <div id='left_block'>
+                      <img src="/static/nextstep/profile.png" alt="marilyns image" width="195" height="200" class='profile_image'/>
+                    </div>
+                    <div id='right_block'>
+                          <div id='your_details'>
+                              <h1>Your  details</h1>
+                          </div>
+                          <div id="email_block">
+                              <p id='email'>Account Email:</p>
+                              <p id='user_email'>{{ user.email }}</p>
+                          </div>
+
+                          <div id="name_block">
+                              <p id='name'></p>
+                              <p id='user_name'></p>
+                          </div>
+                    </div>
+            </div>
+            <div id='cv_list'>
+
+
+                <div id='resume_list_dashboard'>
+                          <div id='resume_list_title_outer'>
+                                <div id='resume_list_title'>
+                                      <h1>Resume list</h1>
+                                </div>
+                                <div id='new_cv'>
+                                      <a href="{% url 'resume_new' %}"> <button class="new_cv_button" id='create_new_cv_dashboard'>Create new CV</button></a>
+                                </div>
+                          </div>
+                        {% for resume in resumes %}
+
+                            <div class='resume_in_list'>
+                                  <div class='resume_title'>
+                                        <a href="{% url 'resume_detail' pk=resume.pk %}">
+                                            {{ resume.name }}
+                                        </a>
+                                  </div>
+                                  <div class='resume_delete'>
+                                      <a href="{% url 'resume_delete' pk=resume.pk %}">
+                                          <button class='resume_delete_button'>Delete</button>
+                                      </a>
+                                  </div>
+                            </div>
+
+                        {% endfor %}
+                </div>
+
+            </div>
+        </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+{% extends 'base_logged_out.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div id ='homepage_wrapper'>
+    <div id="index_1">
+        <div id="index_description">
+            <h1>The light-weight editor for creating your CV</h1>
+        </div>
+        <img src="{{STATIC_URL}}static/images/cv.png" alt="marilyns image" width="1000" height="600" />
+    </div>
+    <div id="index_2">
+      <div id="index_2_left">
+        <h1>Create in minutes, free to use</h1>
+      </div>
+
+      <div id="index_2_right">
+        <img src="{{STATIC_URL}}static/images/write.png" id="write"/>
+      </div>
+    </div>
+    <div id="index_3">
+      <div id="index_3_left">
+        <img src="{{STATIC_URL}}static/images/save.png" id="write"/>
+      </div>
+      <div id="index_3_right">
+        <h1>Save a different version for each application</h1>
+      </div>
+    </div>
+    <div id="index_4">
+      <a href="/user/register/"><button id="get_started">Get started</button></a>
+    </div>
+
+</div>
+{% endblock %}

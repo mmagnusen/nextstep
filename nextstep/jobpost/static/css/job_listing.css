@@ -1,0 +1,299 @@
+/*************************************
+
+      INDIVIDUAL JOB LISTING / DETAIL
+
+*************************************/
+
+#listing_wrapper p {
+  color: #292e35;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+}
+
+#listing_wrapper h1 {
+  color: #292e35;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 25px;
+}
+
+#listing_wrapper a {
+  color: #c40058;
+}
+
+#listing_wrapper {
+  width: 1200px;
+  margin: 100px auto;
+  line-height: 30px;
+}
+
+#return_to_jobs_list {
+  height: 80px;
+  width: 500px;
+  margin: 0 auto;
+  display: block;
+  background-color: #1e304c;
+  border-radius: 10px;
+  padding: 40px 0px 1px 120px;
+
+}
+
+#return_to_jobs_list h1 {
+  color: white;
+  font-size: 40px;
+}
+
+#listing_top_half {
+  display: block;
+  width: 1200px;
+  height: 670px;
+  margin: 100px 0 0 0;
+}
+
+#listing_left_half {
+  width: 260px;
+  height: 250px;
+  display: inline-block;
+  float: left;
+}
+
+#listing_logo {
+  width: 200px;
+  height: 200px;
+}
+
+#listing_middle_half {
+  width: 450px;
+  height: 300px;
+  display: inline-block;
+  float: left;
+}
+
+#title_div {
+  width: 900px;
+  height: 50px;
+  margin: 30px 0 0 0;
+}
+
+#job_title {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+}
+
+#actual_job_title {
+  display: inline-block;
+  height: 40px;
+  width: 650px;
+}
+
+#company_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+}
+
+#company_title {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+}
+
+
+#company_title_actual {
+  display: inline-block;
+  height: 40px;
+  width: 250px;
+}
+
+#website_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+}
+
+#website_title {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  float: left;
+}
+
+#website_actual {
+  display: inline-block;
+  height: 40px;
+  width: 250px;
+  float: left;
+}
+
+#location_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+}
+
+#location_title {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+}
+
+#actual_location{
+  display: inline-block;
+  height: 40px;
+  width: 650px;
+}
+
+#date_listing_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+}
+
+#date_listing_title{
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+}
+
+#actual_date_listing{
+  display: inline-block;
+  height: 40px;
+  width: 650px;
+}
+
+#listing_right_div {
+  float: right;
+  display: inline-block;
+  width: 450px;
+  height: 300px;
+}
+
+#duration_div {
+  width: 900px;
+  height: 50px;
+  margin: 30px 0 0 0;
+}
+
+#duration_title {
+  display: inline-block;
+  width: 175px;
+  height: 40px;
+  float: left;
+}
+
+#duration_actual {
+  display: inline-block;
+  height: 40px;
+  width: 650px;
+  float: left;
+}
+
+#hours_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+
+}
+
+#hours_title {
+  display: inline-block;
+  width: 175px;
+  height: 40px;
+  float: left;
+}
+
+#hours_actual {
+  display: inline-block;
+  height: 40px;
+  width: 650px;
+  float: left;
+}
+
+#experience_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+}
+
+#experience_title {
+  display: inline-block;
+  width: 175px;
+  height: 40px;
+  float: left;
+}
+
+#experience_actual {
+  display: inline-block;
+  height: 40px;
+  width: 650px;
+  float: left;
+}
+
+#salary_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+}
+
+#salary_title {
+  display: inline-block;
+  width: 175px;
+  height: 40px;
+  float: left;
+}
+
+#salary_actual {
+  display: inline-block;
+  height: 40px;
+  width: 200px;
+  float: left;
+}
+
+#application_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+}
+
+#application_title {
+  display: inline-block;
+  width: 175px;
+  height: 40px;
+  float: left;
+}
+
+#application_link {
+  display: inline-block;
+  height: 40px;
+  width: 200px;
+  float: left;
+}
+
+#who_are_we {
+width: 1100px;
+height: 300px;
+display: block;
+float: left;
+margin: 60px 0 0 40px;
+}
+
+#job_description_div {
+  height: 370px;
+  width: 1100px;
+  margin: 20px 0 0 40px;
+}
+
+#job_description_title {
+  display: block;
+  height: 30px;
+  width: 300px;
+  margin: 0 0 10px 0;
+}
+
+#actual_job_description {
+  display: block;
+  height: 300px;
+  width: 1100px;
+  overflow: scroll;
+
+}

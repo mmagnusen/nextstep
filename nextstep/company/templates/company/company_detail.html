@@ -1,0 +1,45 @@
+{% extends 'base_logged_in.html' %}
+
+{% block content %}
+  <div id="detail_wrapper">
+      <a href="/user/dashboard/">
+        <div id='return_to_dashboard'>
+            <h1>Return to dashboard</h1>
+        </div>
+      </a>
+
+      <div id="company_name_div">
+          <div id="company_name_title"><h1>Company name:</h1></div>
+          <div id="company_actual_name"> <h1> {{company.name}}</h1></div>
+      </div>
+
+      <div id="date_div">
+          <div id="created_on"><h1> Created on </h1></div>
+          <div id="actual_creation_date"><h1>{{ company.created_date }} </h1></div>
+      </div>
+
+      <div id="company_website_div">
+        <div id="company_website_title"><h1>Website:</h1></div>
+        <div id="company_actual_website"><h1><a href="{{ company.website }}">{{ company.website }}</a> </h1></div>
+      </div>
+      <div id="description_div">
+          <div id="description_title"><h1>Company Description:</h1></div>
+          <div id="actual_description"><p>{{ company.description }}</p></div>
+      </div>
+
+      <div id="logos">
+          <div id="small_company_logo">
+              <h1>Small logo:</h1><img id="small_logo_image" src="{{ company.small_logo.url }}">
+          </div>
+          <div id="large_company_logo">
+              <h1>Large logo:</h1><img id="large_logo_image"src="{{ company.large_logo.url }}">
+          </div>
+      </div>
+
+      <div id="edit_company">
+        <a href="{% url 'company_edit' pk=company.pk %}"><button class='button'>Edit company details</button></a>
+      </div>
+
+
+  </div>
+{% endblock %}

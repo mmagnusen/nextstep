@@ -1,0 +1,39 @@
+{% extends 'base_logged_out.html' %}
+
+{% block content %}
+<div id='jobs_title'>
+  <h1>Jobs</h1>
+</div>
+
+  <div id="jobs_list">
+
+        {% for post in posts %}
+          <div class='post'>
+            <a href="{% url 'post_detail' pk=post.pk %}">
+                  <div class="job_list_company_logo">
+                    <img src="{{ post.owned_by_company.small_logo.url }}"></img>
+                  </div>
+
+                  <div class="column_one">
+                    <p>{{ post.title }}</p>
+                    <p> {{ post.owned_by_company }} </p>
+
+                    <p> <i class="fa fa-map-marker"></i>{{ post.location }} </p>
+                     <div></div>
+                  </div>
+
+                  <div class="column_two">
+                    <p>{{ post.created_date }}</p>
+                    <p>{{ post.duration}}</p>
+                  </div>
+
+                  <div class="column_three">
+                    <p>{{ post.hours }} </p>
+                    <p>{{ post.experience }} </p>
+                    <p>{{ post.salary }} </p>
+                  </div>
+            </a>
+          </div>
+        {% endfor %}
+</div>
+{% endblock %}

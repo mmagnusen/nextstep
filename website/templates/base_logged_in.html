@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Job List</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/company.css' %}">
+    <link rel="stylesheet" href="{% static 'css/job_listing.css' %}">
+      <link rel="stylesheet" href="{% static 'css/job_edit.css' %}">
+    <script src="https://use.fontawesome.com/5f01ab2269.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="title">
+        <h1>Tech Jobs</h1>
+      </div>
+      <div id="navigation">
+        <ul>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/jobs'>Jobs</a></li>
+          <li><a href='https://medium.com/@NextStepCoders'>Blog</a></li>
+          <li><a href='/logout'> Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="wrapper">
+          <div>
+          {% block content %}
+
+          {% endblock %}
+        </div>
+    </div>
+
+  </body>
+</html>

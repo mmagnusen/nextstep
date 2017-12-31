@@ -1,0 +1,85 @@
+{% extends 'base_logged_out.html' %}
+
+{% block content %}
+<div id="listing_wrapper">
+    <a href="/jobs/">
+      <div id="return_to_jobs_list">
+          <h1>Return to jobs list</h1>
+      </div>
+    </a>
+    <div id="listing_top_half">
+            <div id="listing_left_half">
+                <p> <img id="listing_logo" src="{{ post.owned_by_company.large_logo.url }}"></img> </p>
+            </div>
+
+            <div id="listing_middle_half">
+                <div id="title_div">
+                    <div id="job_title">
+                      <h1>Job Title:</h1>
+                    </div>
+                    <div id="actual_job_title">
+                        <h1>{{post.title}}</h1>
+                    </div>
+                </div>
+
+                <div id="company_div">
+                    <div id="company_title"><h1> Company: </h1></div>
+                    <div id="company_title_actual"><h1>{{ post.owned_by_company }}</h1></div>
+                </div>
+
+                <div id="website_div">
+                    <div id="website_title"><h1> Website: </h1></div>
+                    <div id="website_actual">
+                        <h1><a href="{{ post.owned_by_company.website }}">Visit website</a></h1>
+                    </div>
+                </div>
+
+                <div id="location_div">
+                    <div id="location_title"><h1> Location:  </h1></div>
+                    <div id="actual_location"><h1>{{ post.location }}</h1></div>
+                </div>
+
+                <div id="date_listing_div">
+                  <div id="date_listing_title"><h1> Posted on:</h1></div>
+                  <div id="actual_date_listing"><h1> {{ post.published_date }} </h1></div>
+                </div>
+            </div>
+            <div id="listing_right_div">
+                <div id="duration_div">
+                    <div id="duration_title"><h1>Duration:</h1></div>
+                    <div id="duration_actual"><h1>{{ post.duration }}</h1></div>
+                </div>
+                <div id="hours_div">
+                    <div id="hours_title"><h1>Hours:</h1></div>
+                    <div id="hours_actual "><h1>{{ post.hours }}</h1></div>
+                </div>
+                <div id="experience_div">
+                    <div id="experience_title"><h1>Experience:</h1></div>
+                    <div id="experience_actual"><h1>{{ post.experience }}</h1></div>
+                </div>
+                <div id="salary_div">
+                    <div id="salary_title"><h1>Salary:</h1></div>
+                    <div id="salary_actual"><h1>{{ post.salary }}</h1></div>
+                </div>
+                <div id="application_div">
+                    <div id="application_title"><h1>Application:</h1></div>
+                    <div id="application_link"><h1><a href="{{ post.application_link }}">Apply here</a></h1></div>
+                </div>
+            </div>
+            <div id="who_are_we">
+              <div><h1>Who are we?</h1></div>
+              <div><p>{{ post.owned_by_company.description }}</p></div>
+            </div>
+    </div>
+
+    <div id="job_description_div">
+      <div id="job_description_title">
+        <h1>Job Description:</h1>
+      </div>
+      <div id="actual_job_description">
+        <p>{{ post.description }}</p>
+      </div>
+    </div>
+
+</div>
+{% endblock %}
