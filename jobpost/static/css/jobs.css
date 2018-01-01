@@ -3,21 +3,189 @@
                   jobs page styles (entire jobs list)
 
 *****************************************************/
+#search_div {
+  height: 600px;
+  width: 300px;
+  background-color: #DCEAFF;
+  margin: 10px 20px;
+  padding: 0;
+  display: inline-block;
+  float: left;
+  position: fixed;
+  padding-left: 10px;
+}
+
+#search_div p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  color: #272c35;
+}
+
+#search_form {
+  margin: 0px;
+  padding: 0px;
+  height: 580px;
+  width: 290;
+  background-color: inherit;
+}
 
 #jobs_title {
-  background-color: #DCEAFF;
-  height:150px;
-  width: 1200px;
-  margin: 60px auto;
-  padding: 50px 0px 30px 0px;
+  width: 280px;
+  height: 50px;
+  display: inline-block;
+  float: left;
+  margin: 0px 0 5px 0;
 }
 
 #jobs_title h1 {
-  font-size: 100px;
+  font-size: 40px;
   color: white;
   text-align: center;
   padding: 0;
   margin: 0;
+}
+
+.search_title {
+  height: 40px;
+  width: 280px;
+  margin: 0;
+  display: inline-block;
+  float: left;
+  border-bottom-style: solid;
+  border-bottom-color: #11274c;
+  font-size: 20px;
+}
+
+#duration {
+  width: 290px;
+  display: inline-block;
+  float: left;
+}
+
+#duration_one {
+  width: 130px;
+  height: 40px;
+  float: left;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#duration_two {
+  width: 130px;
+  height: 40px;
+  float: left;
+  display: inline-block;
+}
+
+#experience {
+  width: 290px;
+  display: inline-block;
+  float: left;
+}
+
+#experience_one {
+  width: 140px;
+  height: 80px;
+  display: inline-block;
+  float: left;
+}
+
+
+#experience_two {
+  width: 140px;
+  height: 80px;
+  display: inline-block;
+  float: left;
+}
+
+#hours {
+  width: 290px;
+  display: inline-block;
+  float: left;
+}
+
+#hours_one {
+  width: 80px;
+  display: inline-block;
+  float: left;
+  width: 140px;
+  height: 40px;
+}
+
+#hours_two {
+  width: 80px;
+  display: inline-block;
+  float: left;
+  width: 140px;
+  height: 40px;
+}
+
+#area {
+  width: 290px;
+  display: inline-block;
+  float: left;
+}
+
+#area_one {
+  width: 290px;
+  display: inline-block;
+  float: left;
+}
+
+#area_one_a {
+  width: 140px;
+  display: inline-block;
+  float: left;
+}
+
+#area_one_b {
+  width: 140px;
+  display: inline-block;
+  float: left;
+}
+
+#area_two {
+  width: 290px;
+  display: inline-block;
+  float: left;
+}
+
+#area_two_a {
+  width: 140px;
+  display: inline-block;
+  float: left;
+}
+
+#area_two_b {
+  width: 140px;
+  display: inline-block;
+  float: left;
+}
+
+#area_three {
+  width: 290px;
+  display: inline-block;
+  float: left;
+}
+
+#area_three_a {
+  width: 140px;
+  display: inline-block;
+  float: left;
+}
+
+#area_three_b {
+  width: 140px;
+  display: inline-block;
+  float: left;
+}
+
+#reset_search {
+  width: 100px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+
 }
 
 #jobs_list {
@@ -26,6 +194,8 @@
   margin: 0 auto;
   padding: 50px 50px 50px 50px;
   overflow: scroll;
+  display: inline-block;
+  float: right;
 }
 
 #jobs_list a:visited {

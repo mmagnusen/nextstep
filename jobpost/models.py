@@ -32,6 +32,20 @@ class Post(models.Model):
         (SENIOR, 'Senior'),
     )
 
+    ENGINEERING = 'Engineering'
+    CUSTOMER = 'Customer'
+    PRODUCT = 'Product'
+    MARKETING = 'Marketing'
+    SALES = 'Sales'
+    OPERATIONS = 'Operations'
+    AREA_CHOICES = (
+        (ENGINEERING, 'Engineering'),
+        (CUSTOMER, 'Customer'),
+        (PRODUCT, 'Product'),
+        (MARKETING, 'Marketing'),
+        (SALES, 'Sales'),
+        (OPERATIONS, 'Operations'),
+    )
 
 
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
@@ -44,6 +58,7 @@ class Post(models.Model):
     duration = models.CharField(max_length=20, choices=DURATION_CHOICES, default=PERMANENT)
     hours = models.CharField(max_length=20, choices=HOURS_CHOICES, default=FULLTIME)
     experience = models.CharField(max_length=20, choices=EXPERIENCE_CHOICES, default=INTERN)
+    area = models.CharField(max_length=20, choices=AREA_CHOICES, default=ENGINEERING)
     salary = models.CharField(max_length=20, default="Competitive")
     owned_by_company = models.ForeignKey('company.Company', default=1, on_delete=models.CASCADE, related_name="comp", related_query_name="comps")
     application_link = models.CharField(max_length=500, default='/')

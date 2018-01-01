@@ -21,7 +21,7 @@ def post_detail(request, pk):
 def post_new(request):
     this_user_pk = request.user.pk
     if request.method == 'POST':
-        form = PostForm(request.user, request.POST)
+        form = PostForm(request.POST, user=request.user)
         form.fields['owned_by_company'].queryset = company.Company.objects.filter(pk=1)
 
         if form.is_valid():
@@ -32,7 +32,7 @@ def post_new(request):
             return redirect('/user/dashboard', pk=post.pk)
 
     else:
-        form = PostForm()
+        form = PostForm(user=request.user)
     return render(request, 'jobpost/post_edit.html', {'form': form})
 
 def post_edit(request, pk):

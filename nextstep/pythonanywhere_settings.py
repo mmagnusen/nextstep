@@ -11,4 +11,4 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ['marilynmags.pythonanywhere.com', 'thenextstep.io']
+ALLOWED_HOSTS = ['marilynmags.pythonanywhere.com', 'www.thenextstep.io', 'thenextstep.io']
