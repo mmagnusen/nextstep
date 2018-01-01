@@ -47,6 +47,12 @@ class Post(models.Model):
         (OPERATIONS, 'Operations'),
     )
 
+    REMOTE = 'Remote possible'
+    ONSITE = 'Onsite'
+    BASE_CHOICES = (
+        (REMOTE, 'Remote possible'),
+        (ONSITE, 'Onsite'),
+    )
 
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     location = models.CharField(max_length=50)
@@ -64,6 +70,7 @@ class Post(models.Model):
     application_link = models.CharField(max_length=500, default='/')
     skills = models.TextField(default="Skills")
     benefits = models.TextField(default="Benefits")
+    base = models.CharField(max_length=20, choices=BASE_CHOICES, default=ONSITE)
 
     def publish(self):
         self.published_date = timezone.now()

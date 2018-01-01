@@ -54,6 +54,7 @@
   height: 250px;
   display: inline-block;
   float: left;
+  padding: 60px 0 0 0;
 }
 
 #listing_logo {
@@ -72,9 +73,9 @@
 #title_div {
   width: 1100px;
   height: 50px;
-  margin: 100px 0 0 0;
+  margin: 80px 0 0 0;
   display: block;
-  padding-top: 30px;
+  padding-top: 20px;
 
 }
 
@@ -160,6 +161,24 @@
 }
 
 #actual_date_listing{
+  display: inline-block;
+  height: 40px;
+  width: 650px;
+}
+
+#base_div {
+  width: 900px;
+  height: 50px;
+  margin: 10px 0 0 0;
+}
+
+#base_title{
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+}
+
+#base_actual {
   display: inline-block;
   height: 40px;
   width: 650px;
@@ -277,10 +296,10 @@
 
 #who_are_we {
 width: 1100px;
-height: 300px;
+min-height: 300px;
 display: block;
 float: left;
-margin: 60px 0 0 40px;
+margin: 50px 0 0 40px;
 }
 
 #job_description_div {
@@ -293,14 +312,14 @@ margin: 60px 0 0 40px;
   display: block;
   height: 30px;
   width: 300px;
-  margin: 0 0 50px 0;
+  margin: 0 0 60px 0;
 }
 
 #actual_job_description {
   display: block;
-  height: 300px;
+  min-height: 300px;
   width: 1100px;
-  overflow: scroll;
+  margin: 0 0 10px 0;
 
 }
 
@@ -309,7 +328,7 @@ margin: 60px 0 0 40px;
   min-height: 100px;
   width: 1100px;
   overflow: scroll;
-  margin: 0px 0  0 0;
+  margin: 50px 0  0 0;
 }
 
 #job_benefits {
