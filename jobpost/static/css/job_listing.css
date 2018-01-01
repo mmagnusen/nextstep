@@ -66,12 +66,16 @@
   height: 300px;
   display: inline-block;
   float: left;
+  padding: 0 0 0 0;
 }
 
 #title_div {
-  width: 900px;
+  width: 1100px;
   height: 50px;
-  margin: 30px 0 0 0;
+  margin: 100px 0 0 0;
+  display: block;
+  padding-top: 30px;
+
 }
 
 #job_title {
@@ -162,10 +166,12 @@
 }
 
 #listing_right_div {
-  float: right;
-  display: inline-block;
   width: 450px;
   height: 300px;
+  display: inline-block;
+  float: left;
+  padding: -100px 0 0 0;
+  margin: -20px 0 0 0;
 }
 
 #duration_div {
@@ -278,7 +284,7 @@ margin: 60px 0 0 40px;
 }
 
 #job_description_div {
-  height: 370px;
+  min-height: 370px;
   width: 1100px;
   margin: 20px 0 0 40px;
 }
@@ -287,7 +293,7 @@ margin: 60px 0 0 40px;
   display: block;
   height: 30px;
   width: 300px;
-  margin: 0 0 10px 0;
+  margin: 0 0 50px 0;
 }
 
 #actual_job_description {
@@ -296,4 +302,20 @@ margin: 60px 0 0 40px;
   width: 1100px;
   overflow: scroll;
 
+}
+
+#job_skills {
+  display: block;
+  min-height: 100px;
+  width: 1100px;
+  overflow: scroll;
+  margin: 0px 0  0 0;
+}
+
+#job_benefits {
+  display: block;
+  min-height: 100px;
+  width: 1100px;
+  overflow: scroll;
+  margin: 40px 0  0 0;
 }

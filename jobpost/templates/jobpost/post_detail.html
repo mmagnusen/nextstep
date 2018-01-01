@@ -11,16 +11,17 @@
             <div id="listing_left_half">
                 <p> <img id="listing_logo" src="{{ post.owned_by_company.large_logo.url }}"></img> </p>
             </div>
+            <div id="title_div">
+                <div id="job_title">
+                  <h1>Job Title:</h1>
+                </div>
+                <div id="actual_job_title">
+                    <h1>{{post.title}}</h1>
+                </div>
+            </div>
 
             <div id="listing_middle_half">
-                <div id="title_div">
-                    <div id="job_title">
-                      <h1>Job Title:</h1>
-                    </div>
-                    <div id="actual_job_title">
-                        <h1>{{post.title}}</h1>
-                    </div>
-                </div>
+
 
                 <div id="company_div">
                     <div id="company_title"><h1> Company: </h1></div>
@@ -41,7 +42,7 @@
 
                 <div id="date_listing_div">
                   <div id="date_listing_title"><h1> Posted on:</h1></div>
-                  <div id="actual_date_listing"><h1> {{ post.published_date }} </h1></div>
+                  <div id="actual_date_listing"><h1> {{ post.created_date }} </h1></div>
                 </div>
             </div>
             <div id="listing_right_div">
@@ -79,6 +80,15 @@
       <div id="actual_job_description">
         <p>{{ post.description }}</p>
       </div>
+      <div id="job_skills">
+        <h1>Experience + Skills</h1>
+        <p>{{ post.skills }}</p>
+      </div>
+      <div id="job_benefits">
+        <h1>Benefits</h1>
+        <p>{{ post.benefits }}</p>
+      </div>
+
     </div>
 
 </div>

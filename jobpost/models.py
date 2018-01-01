@@ -62,6 +62,8 @@ class Post(models.Model):
     salary = models.CharField(max_length=20, default="Competitive")
     owned_by_company = models.ForeignKey('company.Company', default=1, on_delete=models.CASCADE, related_name="comp", related_query_name="comps")
     application_link = models.CharField(max_length=500, default='/')
+    skills = models.TextField(default="Skills")
+    benefits = models.TextField(default="Benefits")
 
     def publish(self):
         self.published_date = timezone.now()
