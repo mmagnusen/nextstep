@@ -19,7 +19,7 @@ def company_detail(request, pk):
 
 def company_new(request):
     if request.method == 'POST':
-        form = CompanyForm(request.POST)
+        form = CompanyForm(request.POST, request.FILES)
         if form.is_valid():
             company = form.save(commit=False)
             company.owner = request.user

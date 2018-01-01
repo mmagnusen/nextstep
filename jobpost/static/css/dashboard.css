@@ -422,10 +422,9 @@ float: right;
 }
 
 .post_title_div {
-  background-color:
   display: inline-block;
-  width: 300px;
-  height: 70px;
+  width: 700px;
+  height: 60px;
   float: left;
 }
 

@@ -7,14 +7,20 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = (
                     'title',
-                    'description',
                     'location',
                     'owned_by_company',
                     'duration',
                     'hours',
                     'experience',
                     'salary',
-                    'application_link')
+                    'application_link',
+                    'area',
+                    'base',
+                    'description',
+                    'skills',
+                    'benefits',
+                    )
+
     def __init__(self, *args, **kwargs):
         user = kwargs.pop('user')
         super(PostForm, self).__init__(*args, **kwargs)
