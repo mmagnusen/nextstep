@@ -9,7 +9,6 @@ from django.contrib.auth.models import User
 from .forms import PostForm
 
 # Create your views here.
-
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'jobpost/post_list.html', {'posts': posts})
@@ -19,11 +18,8 @@ def post_detail(request, pk):
     return render(request, 'jobpost/post_detail.html', {'post': post})
 
 def post_new(request):
-    this_user_pk = request.user.pk
     if request.method == 'POST':
         form = PostForm(request.POST, user=request.user)
-        form.fields['owned_by_company'].queryset = company.Company.objects.filter(pk=1)
-
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
