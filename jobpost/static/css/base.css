@@ -1,4 +1,9 @@
-#wrapper {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#base-wrapper {
   width: 100%;
   min-height: 600px;
   background-color: white;
@@ -8,25 +13,11 @@
   clear: both;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  margin: 0px;
-  padding: 0px;
-  font-size: 20px;
-  font-family: 'Lato', sans-serif;
-}
-
 h2 {
 
   margin: 0;
   padding: 0;
-
 }
-
 
 a:visited {
 text-decoration: none;
@@ -53,23 +44,20 @@ color: #202020;
 }
 
 
-
 /*********************************************
 
                 header/navigation
 
 **********************************************/
 #outer_header {
-  width: 90%;
+  width: 1400px;
   height: 120px;
-  margin: 0 auto;
-
+  margin: 10px auto;
 }
 
 #inner_header {
-
+  width: 1400px;
   height: 100px;
-  width: 1200px;
   margin: 0 auto;
 }
 
@@ -82,103 +70,59 @@ color: #202020;
   border-radius: 5px;
   margin: 10px;
   padding: 2%  1% 1% 1%;
-
 }
+
 #title a {
   color: white;
   font-size: 30px;
   font-family: 'Archivo', sans-serif;
-
 }
 
 #navigation {
-  width: 400px;
+  width: 300px;
   height: 100px;
   display: inline-block;
   float: right;
-  text-align: right;
-
-}
-
-
-
-ol {
   list-style: none;
 }
 
 #navigation li {
-  display: inline;
-  padding-right: 20px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  padding-bottom: 4px;
 }
 
 #navigation a {
-  color: grey;
+  color: #484848;
   font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
 }
 
-
-
-/****************************************************
-
-                  individual job listing
-
-*****************************************************/
-#individual_post_wrapper {
-
-  width: 80%;
-  margin: 20px auto;
+.navigation-items:hover {
+  border-color: grey;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 
-.job_title {
-
-  width: 500px;
-  display: inline-block;
+#navigation-item-1 {
+  width: 40px;
 }
 
-#return_to_jobs_list {
-  height: 40px;
-  width: 250px;
-  background-color: #D11149;;
-  border-radius: 10px;
-  margin: 20px 0px 20px 0px;
-  padding: 20px 20px 10px 50px;
-  display: inline-block;
-  color: white;
+#navigation-item-2 {
+  width: 40px;
 }
 
-#return_to_jobs_list h1 {
-  font-size: 20px;
-
+#navigation-item-3 {
+  width: 65px;
 }
 
-.date {
-  height: 100px;
-  width: 90%;
-
+#navigation-item-4 {
+  width: 50px;
 }
 
-.title_div {
-  height: 150px;
-  width: 100%;
-  background-color: #ECECEC;
-  padding: 80px 10px 10px 150px;
-
-}
-
-.title_div h1 {
-  font-size: 50px;
-  color: yellow;
-}
-
-.title_div a {
-  font-size: 50px;
-  color: red;
-}
-
-.description {
-  height: 200px;
-  width: 90%;
-}
 
 /****************************************************
 
