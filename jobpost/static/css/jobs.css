@@ -3,16 +3,18 @@
                   jobs page styles (entire jobs list)
 
 *****************************************************/
+
+#jobs_list_wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(370px, 390px)  minmax(950px, 1000px);
+
+}
+
 #search_div {
-  height: 600px;
-  width: 300px;
-  background-color: #DCEAFF;
-  margin: 10px 20px;
-  padding: 0;
-  display: inline-block;
-  float: left;
-  position: fixed;
-  padding-left: 10px;
+  margin-left: 30px;
+  margin-right: 50px;
 }
 
 #search_div p {
@@ -24,9 +26,9 @@
 #search_form {
   margin: 0px;
   padding: 0px;
-  height: 580px;
-  width: 290;
   background-color: inherit;
+  height: 100%;
+  width: 100%;
 }
 
 #jobs_title {
@@ -40,6 +42,7 @@
 #jobs_title h1 {
   font-size: 40px;
   color: white;
+  background-color: #008489;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -51,9 +54,9 @@
   margin: 0;
   display: inline-block;
   float: left;
-  border-bottom-style: dotted;
-  border-bottom-color: white;
-  border-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.14);
+  border-top-width: thin;
   font-size: 20px;
   font-weight: bold;
 }
@@ -183,21 +186,24 @@
 }
 
 #reset_search {
-  width: 100px;
-  height: 30px;
-  display: block;
-  margin: 0 auto;
 
 }
 
+#empty_search {
+  background-color: #008489;
+  color: white;
+  height: 30px;
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 90px;
+}
+
 #jobs_list {
-  width: 1000px;
+  width: 100%;
   height: 600px;
   margin: 0 auto;
-  padding: 50px 50px 50px 50px;
   overflow: scroll;
-  display: inline-block;
-  float: right;
+  color: #292c30;
 }
 
 #jobs_list a:visited {
@@ -209,18 +215,14 @@
   height: 150px;
   margin: 0px;
   padding: 15px;
-  border-top-color: grey;
-  border-top-style: dotted;
-  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.14);
+  border-top-width: thin;
 }
 
 .post:hover {
   background-color: #DCEAFF;
   transition: all 200ms ease;
-}
-
-.post h1 {
-  color: #202020;
 }
 
 .post p {
@@ -253,7 +255,6 @@
 .text {
   display: inline-block;
   float: left;
-  width: 700px;
   height: 150px;
   margin: 0 0 0 10px;
 }
