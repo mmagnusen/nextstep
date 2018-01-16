@@ -27,7 +27,6 @@
   </head>
   <body>
     <div id="outer_header">
-        <div id="inner_header">
             <div id="title">
                 <a href='/'>The Next Step</a>
             </div>
@@ -39,7 +38,14 @@
                 <li class="navigation-items" id="navigation-item-4"><a href='/login'> Login </a></li>
               </ul>
             </div>
-        </div>
+            <div id="hamburger">
+              <div id="ham">
+                  <div class="bar" id="top"></div>
+                  <div class="bar" id="middle"></div>
+                  <div class="bar" id="bottom"></div>
+              </div>
+            </div>
+            
     </div>
     <div id="base-wrapper">
           <div>
@@ -68,5 +74,6 @@
           </div>
       </div>
     </div>
+    <script type="text/javascript" src="{% static 'js/base_logged_out.js' %}" ></script>
   </body>
 </html>
