@@ -3,129 +3,88 @@
 {% block content %}
 
 <div id="jobs_list_wrapper">
-    <div id="search_div">
-        <form id="search_form">
-            <div id="jobs_title">
-                <h1>Jobs</h1>
+
+      <form id="search_form">
+            <div id='search-wrapper'>
+                  <div id='title-with-arrow'>
+                      <h1 id="jobs_title">Search </h1>
+                      <i class="arrow-down"></i>
+                  </div>
+                  <div id="duration" class="search-area">
+                          <h3 class="search_title">Duration</h3>
+                          <div class="search-options">
+                              <p>Contract<input type="checkbox" name="duration" value="contract"></input></p>
+                              <p>Permanent<input type="checkbox" name="duration" value="permanent"></input></p>
+                          </div>
+                  </div>
+
+                  <div id="experience" class="search-area">
+                          <h3 class="search_title">Experience</h3>
+                          <div class="search-options">
+                              <p>Intern<input type="checkbox" name="experience" value="intern"></input></p>
+                              <p>Junior<input type="checkbox" name="experience" value="junior"></input></p>
+                              <p>Mid-level<input type="checkbox" name="experience" value="mid"></input></p>
+                              <p>Senior<input type="checkbox" name="experience" value="senior"></input></p>
+                          </div>
+                  </div>
+
+                  <div id="hours" class="search-area">
+                          <h3 class="search_title">Hours</h3>
+                          <div class="search-options">
+                              <p>Full-time<input type="checkbox" name="hours" value="fulltime"></input></p>
+                              <p>Part-time<input type="checkbox" name="hours" value="parttime"></input></p>
+                          </div>
+                  </div>
+
+                  <div id="area" class="search-area">
+                          <h3 class="search_title">Area</h3>
+                          <div class="search-options">
+                              <p>Engineering<input type="checkbox" name="area" value="engineering"></input></p>
+                              <p>Customer<input type="checkbox" name="area" value="customer"></input></p>
+                              <p>Product<input type="checkbox" name="area" value="product"></input></p>
+                              <p>Marketing<input type="checkbox" name="area" value="marketing"></input></p>
+                              <p>Sales<input type="checkbox" name="area" value="sales"></input></p>
+                              <p>Operations<input type="checkbox" name="area" value="operations"></input></p>
+                          </div>
+                  </div>
             </div>
-              <div id="duration">
-                  <div class="search_title">
-                    <p>Duration</p>
-                  </div>
-                  <div id="duration_one">
-                      <p>Contract<input type="checkbox" name="duration" value="contract"></input></p>
-                  </div>
-                  <div id="duration_two">
-                      <p>Permanent<input type="checkbox" name="duration" value="permanent"></input></p>
-                  </div>
-              </div>
-
-              <div id="experience">
-                  <div class="search_title">
-                      <p>Experience</p>
-                  </div>
-                  <div id="experience_one">
-                      <div>
-                          <p>Intern<input type="checkbox" name="experience" value="intern"></input></p>
-                      </div>
-                      <div>
-                          <p>Junior<input type="checkbox" name="experience" value="junior"></input></p>
-                      </div>
-                  </div>
-                  <div id="experience_two">
-                      <div>
-                          <p>Mid-level<input type="checkbox" name="experience" value="mid"></input></p>
-                      </div>
-                      <div>
-                          <p>Senior<input type="checkbox" name="experience" value="senior"></input></p>
-                      </div>
-                  </div>
-              </div>
-
-              <div id="hours">
-                  <div class="search_title">
-                      <p>Hours</p>
-                  </div>
-                  <div id="hours_one">
-                      <p>Full-time<input type="checkbox" name="hours" value="fulltime"></input></p>
-                  </div>
-                  <div id="hours_two">
-                      <p>Part-time<input type="checkbox" name="hours" value="parttime"></input></p>
-                  </div>
-              </div>
-
-              <div id="area">
-                  <div class="search_title">
-                    <p>Area</p>
-                  </div>
-                  <div id="area_one">
-                      <div id="area_one_a">
-                        <p>Engineering<input type="checkbox" name="area" value="engineering"></input></p>
-                      </div>
-                      <div id="area_one_b">
-                        <p>Customer<input type="checkbox" name="area" value="customer"></input></p>
-                      </div>
-                  </div>
-                  <div id="area_two">
-                      <div id="area_two_a">
-                        <p>Product<input type="checkbox" name="area" value="product"></input></p>
-                      </div>
-                      <div id="area_two_b">
-                        <p>Marketing<input type="checkbox" name="area" value="marketing"></input></p>
-                      </div>
-                  </div>
-                  <div id="area_three">
-                      <div id="area_three_a">
-                        <p>Sales<input type="checkbox" name="area" value="sales"></input></p>
-                      </div>
-                      <div id="area_three_b">
-                        <p>Operations<input type="checkbox" name="area" value="operations"></input></p>
-                      </div>
-                  </div>
-              </div>
-              <div id="reset_search">
-                  <button type="reset" id="empty_search">Reset</button>
-              </div>
-        </form>
-    </div>
+            <div id="bottom-search-buttons" class="search-area">
+                <button type="submit" id="start_search">Search</button>
+                <button type="reset" id="empty_search">Reset</button>
+            </div>
+      </form>
 
 
     <div id="jobs_list">
 
           {% for post in posts %}
+          <a href="{% url 'post_detail' pk=post.pk %}">
             <div class="post">
-                <a href="{% url 'post_detail' pk=post.pk %}">
+
                       <div class="job_list_company_logo">
                         <img src="{{ post.owned_by_company.small_logo.url }}" class="actual_company_logo"></img>
                       </div>
 
                       <div class="text">
                           <div class="text_upper">
-                            <p class="title">{{ post.title }} <span class="connector">at</span> {{ post.owned_by_company }}</p>
+                            <p class="title">{{ post.title }}</p>
+                            <p>{{ post.owned_by_company }}</p>
                           </div>
 
                           <div class="text_lower">
-                              <div class="column_one">
-                                  <div class="map"> <i class="fa fa-map-marker"></i></div>
-                                  <div class="location"><p>{{ post.location }}</p></div>
+                                  <p>{{ post.location }}</p>
                                   <p class="duration">{{ post.duration}}</p>
-                              </div>
-
-                              <div class="column_two">
-                                <p>{{ post.created_date }}</p>
-                                <p>{{ post.hours }} </p>
-                              </div>
-
-                              <div class="column_three">
-                                <p>{{ post.experience }} </p>
-                                <p>{{ post.salary }} </p>
-                              </div>
+                                  <p>{{ post.created_date }}</p>
+                                  <p>{{ post.hours }} </p>
+                                  <p>{{ post.experience }} </p>
+                                  <p>{{ post.salary }} </p>
                           </div>
-                    </div>
-                </a>
+                      </div>
             </div>
+          </a>
           {% endfor %}
     </div>
+
 </div>
 
 {% endblock %}
