@@ -1,5 +1,5 @@
 altgraph==0.10.2
-Django==1.11.7
+Django==2.2.24
 gunicorn==19.7.1
 macholib==1.5.1
 Pillow==4.3.0
