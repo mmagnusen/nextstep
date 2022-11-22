@@ -2,7 +2,7 @@ altgraph==0.10.2
 Django==1.11.7
 gunicorn==19.7.1
 macholib==1.5.1
-Pillow==4.3.0
+Pillow==9.3.0
 psycopg2==2.7.3.2
 py2app==0.7.3
 pyOpenSSL==0.13.1
